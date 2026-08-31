@@ -489,3 +489,26 @@ code {
   .wordcloud .w4 { font-size: 1.5rem; }
   .cv-embed { height: 70vh; }
 }
+
+.videos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  gap: 1.75rem;
+  margin: 2rem 0 2.5rem;
+}
+
+.video-item { margin: 0; }
+
+.video-item iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  background: var(--paper-sunk);
+}
+
+.video-item figcaption {
+  font-size: var(--t-xs);
+  color: var(--ink-soft);
+  line-height: 1.45;
+  margin-top: 0.5rem;
+}
