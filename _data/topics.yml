@@ -1,0 +1,99 @@
+# ---------------------------------------------------------------------------
+# Research topics.
+#
+# This one file does two jobs:
+#   1. the site reads "name", "blurb", "url" and "image" to build the pages
+#   2. scripts/update_publications.py reads "keywords", "always" and "never"
+#      to decide which papers appear on each topic page
+#
+# A paper lands on a topic page if any keyword below appears in its title,
+# abstract or ADS keywords. Case does not matter, and matching is on whole
+# words, so "LRD" will not match "hybrids".
+#
+# When the keywords get it wrong, fix it by hand:
+#   always:  bibcodes that should appear no matter what the keywords say
+#   never:   bibcodes that should never appear, no matter what
+# A bibcode looks like 2024ApJ...968...19D and sits at the top of every ADS
+# abstract page.
+#
+# Changing the order of the three blocks below changes the order of the
+# navigation and of the cards on the homepage.
+# ---------------------------------------------------------------------------
+
+lrd:
+  name: Little Red Dots
+  blurb: >-
+    Compact, red, and unexpectedly common in the early universe. Whether they
+    are dust-reddened black holes or something stranger is still open.
+  url: /research/little-red-dots/
+  image: /assets/img/lrd.png
+  image_alt: Image cutout of a little red dot
+  image_caption: Replace assets/img/lrd.png with your own cutout.
+  keywords:
+    - little red dot
+    - little red dots
+    - LRD
+    - LRDs
+    - obscured AGN
+    - reddened AGN
+    - broad line AGN
+    - broad-line AGN
+    - broad Halpha
+    - compact red
+    - v-shaped continuum
+    - Balmer break
+  always: []
+  never: []
+
+eelg:
+  name: Extreme Emission Line Galaxies
+  blurb: >-
+    Small galaxies whose emission lines outshine their own starlight, and what
+    those lines reveal about the gas and radiation inside them.
+  url: /research/extreme-emission-line-galaxies/
+  image: /assets/img/eelg.png
+  image_alt: Image cutout of an extreme emission line galaxy
+  image_caption: Replace assets/img/eelg.png with your own cutout.
+  keywords:
+    - extreme emission line
+    - extreme emission-line
+    - EELG
+    - EELGs
+    - equivalent width
+    - emission line galaxy
+    - emission-line galaxy
+    - line ratio
+    - strong line
+    - strong-line
+    - ionization parameter
+    - ionizing photon
+    - starburst
+  always: []
+  never: []
+
+survey:
+  name: Survey Design
+  blurb: >-
+    Choosing filters, depths and pointings so that a fixed amount of telescope
+    time answers the largest number of questions.
+  url: /research/survey-design/
+  image: /assets/img/survey.png
+  image_alt: Sky coverage of a deep field survey
+  image_caption: Replace assets/img/survey.png with your own cutout.
+  keywords:
+    - survey design
+    - medium band
+    - medium-band
+    - medium bands
+    - CEERS
+    - SPAM
+    - deep field
+    - imaging survey
+    - photometric survey
+    - observing strategy
+    - filter set
+    - exposure time
+    - data release
+    - mosaic
+  always: []
+  never: []
