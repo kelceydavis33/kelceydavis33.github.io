@@ -1,0 +1,41 @@
+<header class="rail">
+  <div class="rail-inner">
+
+    <a class="identity" href="{{ '/' | relative_url }}">
+      <span class="identity-name">{{ site.name }}</span>
+      <span class="identity-role">PhD candidate, physics</span>
+      <span class="identity-role">UConn &amp; Los Alamos National Laboratory</span>
+    </a>
+
+    <nav class="nav" aria-label="Main">
+      <ul>
+        <li><a href="{{ '/' | relative_url }}"{% if page.url == "/" %} aria-current="page"{% endif %}>About</a></li>
+        <li><a href="{{ '/cv/' | relative_url }}"{% if page.url contains "/cv" %} aria-current="page"{% endif %}>CV</a></li>
+        <li>
+          <a href="{{ '/research/' | relative_url }}"{% if page.url == "/research/" %} aria-current="page"{% endif %}>Research</a>
+          <ul class="nav-sub">
+            {% for topic in site.data.topics %}
+            <li>
+              <a href="{{ topic[1].url | relative_url }}"
+                 class="topic-link topic-{{ topic[0] }}"
+                 {% if page.topic_id == topic[0] %}aria-current="page"{% endif %}>{{ topic[1].name }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </li>
+        <li><a href="{{ '/publications/' | relative_url }}"{% if page.url contains "/publications" %} aria-current="page"{% endif %}>Publications</a></li>
+      </ul>
+    </nav>
+
+    <div class="rail-contact">
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+      <span class="rail-links">
+        <a href="{{ site.profiles.ads }}">ADS</a>
+        <a href="{{ site.profiles.orcid }}">ORCID</a>
+        <a href="{{ site.profiles.github }}">GitHub</a>
+        {% if site.profiles.scholar != "" %}<a href="{{ site.profiles.scholar }}">Scholar</a>{% endif %}
+      </span>
+    </div>
+
+  </div>
+</header>
