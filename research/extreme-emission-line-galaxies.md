@@ -16,8 +16,8 @@ This work motivated an observing proposal to add medium bands to the CEERS field
 
 
 {% include blink.html
-   a="/assets/img/eelg-spikes.png"
-   b="/assets/img/eelg-conts.png"
+   a="/assets/img/eelg-spikes.jpg"
+   b="/assets/img/eelg-conts.jpg"
    alt_a="Emission line maps of the 100 brightest EELGs"
    alt_b="Continuum maps of the same 100 galaxies"
    caption="The 100 brightest EELGs in Davis 2024, alternating between line emission and continuum postage stamps." %}
