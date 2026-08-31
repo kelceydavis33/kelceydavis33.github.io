@@ -50,6 +50,11 @@
     {% include sidebar.html %}
 
     <main id="main" class="content">
+      {% if page.url != "/" %}
+      <div class="page-strip" role="presentation"
+           style="background-image: url('{{ '/assets/img/CEERS11.jpg' | relative_url }}')"></div>
+      {% endif %}
+
       {{ content }}
 
       <footer class="site-footer">
