@@ -9,7 +9,7 @@ A sentence or two on why you do this.
 ## [STEMArts](https://stemarts.com/sciart-productions/sciart-live-coding/) Scientist
 Summer 2025 – present
 
-![Presenting an audio file and the CAPERS spectrum it was generated from](livecoding.jpeg)
+{% include gallery.html photos=site.data.outreach_photos.stemarts %}
 
 - Sonified JWST NIRSpec data from the CAPERS program into audio of emission
   lines, and computed RGB values for rest-frame line colors, so students could
@@ -37,6 +37,8 @@ Fall 2024 – summer 2025
   clickable lesson files in HTML and Nightshade's StratoScript.
 - Organized and presented public shows on the night sky, eclipses, aliens, and
   current sky news.
+
+{% include gallery.html photos=site.data.outreach_photos.planetarium %}
 
 ## AAVSO Outreach Ambassador
 October 2020 – present
