@@ -23,77 +23,47 @@
 lrd:
   name: Little Red Dots
   blurb: >-
-    Compact, red, and unexpectedly common in the early universe. Whether they
-    are dust-reddened black holes or something stranger is still open.
+    Compact sources with v-shaped energy ditributions discovered by JWST
   url: /research/little-red-dots/
-  image: /assets/img/lrd.png
-  image_alt: Image cutout of a little red dot
-  image_caption: Replace assets/img/lrd.png with your own cutout.
+  image: /assets/img/lrds.png
+  image_alt: Image cutout of a little red dot from Kocevki 2024
+  image_caption: Image cutout of a little red dot from Kocevki 2024
   keywords:
-    - little red dot
-    - little red dots
-    - LRD
-    - LRDs
-    - obscured AGN
-    - reddened AGN
-    - broad line AGN
-    - broad-line AGN
-    - broad Halpha
-    - compact red
-    - v-shaped continuum
-    - Balmer break
+    - Little Red Dots
+    - Active Galactic Nuclei
+    - Broad Absorption-line LRDs
+    -JWST NIRSpec
   always: []
   never: []
 
 eelg:
   name: Extreme Emission Line Galaxies
   blurb: >-
-    Small galaxies whose emission lines outshine their own starlight, and what
-    those lines reveal about the gas and radiation inside them.
+    Extremely strong rest-optical line emission at Cosmic Dawn as seen by JWST
   url: /research/extreme-emission-line-galaxies/
-  image: /assets/img/eelg.png
-  image_alt: Image cutout of an extreme emission line galaxy
-  image_caption: Replace assets/img/eelg.png with your own cutout.
+  image: /assets/img/eelg-spikes.png
+  image_alt: Brightest 100 EELGs in the sample from Davis 2024
+  image_caption: Brightest 100 EELGs in the sample from Davis 2024
   keywords:
-    - extreme emission line
-    - extreme emission-line
-    - EELG
-    - EELGs
-    - equivalent width
-    - emission line galaxy
-    - emission-line galaxy
-    - line ratio
-    - strong line
-    - strong-line
-    - ionization parameter
-    - ionizing photon
-    - starburst
+    - Extreme Emission Line Galaxies
+    - Star Formation Histories
+    - Emission Line Morphology
   always: []
   never: []
 
 survey:
   name: Survey Design
   blurb: >-
-    Choosing filters, depths and pointings so that a fixed amount of telescope
-    time answers the largest number of questions.
+    Desiging NIRCam and NIRSpec observations for JWST and other future missions. 
   url: /research/survey-design/
-  image: /assets/img/survey.png
-  image_alt: Sky coverage of a deep field survey
-  image_caption: Replace assets/img/survey.png with your own cutout.
+  image: /assets/img/SPAM-can-logo.png
+  image_alt: SPAM survey logo
+  image_caption: SPAM survey logo
   keywords:
-    - survey design
-    - medium band
-    - medium-band
-    - medium bands
-    - CEERS
-    - SPAM
-    - deep field
-    - imaging survey
-    - photometric survey
-    - observing strategy
-    - filter set
-    - exposure time
-    - data release
-    - mosaic
+    - medium-band photometry
+    - deep field images
+    - JWST NIRCam
+    - JWST NIRSpec
+    - photometric surveys
   always: []
   never: []
