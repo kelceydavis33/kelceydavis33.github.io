@@ -32,7 +32,7 @@ lrd:
     - Little Red Dots
     - Active Galactic Nuclei
     - Broad Absorption-line LRDs
-    -JWST NIRSpec
+    - JWST NIRSpec
   always: []
   never: []
 
