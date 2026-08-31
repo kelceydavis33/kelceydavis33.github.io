@@ -1,0 +1,12 @@
+{
+  "stats": {
+    "n_papers": 0,
+    "n_refereed": 0,
+    "n_first_author": 0,
+    "citations_total": 0,
+    "h_index": 0,
+    "i10_index": 0,
+    "updated": "not yet run"
+  },
+  "papers": []
+}
