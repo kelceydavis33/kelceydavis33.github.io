@@ -238,19 +238,6 @@ code {
   margin: 0.75rem 0 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .bandpasses .band-line {
-    stroke-dasharray: 900;
-    stroke-dashoffset: 900;
-    animation: draw 1.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-  }
-  .bandpasses .band-fill { opacity: 0; animation: fade 1.4s ease-out 0.7s forwards; }
-  @keyframes draw { to { stroke-dashoffset: 0; } }
-  /* Must land on the same value as the fill-opacity attribute in the SVG:
-     a CSS animation overrides that attribute, so ending at 1 would turn the
-     wide bands solid. */
-  @keyframes fade { to { opacity: 0.075; } }
-}
 
 /* --------------------------------------------------------------------------
    Research index cards
