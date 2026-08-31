@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% seo title=false %}
+  <title>{% if page.title and page.url != "/" %}{{ page.title }} — {{ site.name }}{% else %}{{ site.name }} — {{ site.tagline }}{% endif %}</title>
+
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+
+  {% if page.url == "/" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "{{ site.name }}",
+    "givenName": "Kelcey",
+    "familyName": "Davis",
+    "jobTitle": "PhD Candidate",
+    "email": "mailto:{{ site.email }}",
+    "url": "{{ site.url }}{{ site.baseurl }}/",
+    "affiliation": [
+      {% for place in site.affiliations %}
+      { "@type": "Organization", "name": "{{ place.name }}", "url": "{{ place.url }}" }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ],
+    "identifier": "https://orcid.org/{{ site.orcid }}",
+    "knowsAbout": ["Astrophysics", "Galaxy evolution", "Active galactic nuclei", "JWST", "Extreme emission line galaxies", "Little red dots", "Astronomical survey design"],
+    "sameAs": [
+      "{{ site.profiles.orcid }}",
+      "{{ site.profiles.ads }}",
+      "{{ site.profiles.github }}"{% if site.profiles.scholar != "" %},
+      "{{ site.profiles.scholar }}"{% endif %}{% if site.profiles.linkedin != "" %},
+      "{{ site.profiles.linkedin }}"{% endif %}
+    ]
+  }
+  </script>
+  {% endif %}
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="layout">
+    {% include sidebar.html %}
+
+    <main id="main" class="content">
+      {{ content }}
+
+      <footer class="site-footer">
+        <p>
+          {{ site.name }} &middot; {{ site.email }}
+          &middot; <a href="{{ site.profiles.orcid }}">ORCID {{ site.orcid }}</a>
+        </p>
+        <p class="fine">
+          Built with Jekyll and hosted on GitHub Pages. Publication data comes from
+          <a href="https://ui.adsabs.harvard.edu/">NASA ADS</a> and refreshes on the first of every month.
+        </p>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
