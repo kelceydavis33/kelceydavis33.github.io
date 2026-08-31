@@ -1,0 +1,61 @@
+# ---------------------------------------------------------------------------
+# Site settings. Edit the values in this block; everything else can stay.
+# ---------------------------------------------------------------------------
+
+name: Kelcey Davis
+title: Kelcey Davis
+tagline: PhD candidate in physics, University of Connecticut and Los Alamos National Laboratory
+description: >-
+  Kelcey Davis is a PhD candidate in physics at the University of Connecticut
+  and Los Alamos National Laboratory, studying distant galaxies and growing
+  black holes with JWST.
+
+email: kelcey.davis@uconn.edu
+orcid: 0000-0001-8047-8351
+
+# Set this to the address the site is actually served from.
+#   Repository named kelceydavis33.github.io  ->  https://kelceydavis33.github.io
+#   Repository named anything else            ->  https://kelceydavis33.github.io/reponame
+#                                                 and set baseurl: "/reponame"
+url: "https://kelceydavis33.github.io"
+baseurl: ""
+
+affiliations:
+  - name: Department of Physics, University of Connecticut
+    url: https://physics.uconn.edu
+  - name: Los Alamos National Laboratory
+    url: https://www.lanl.gov
+
+profiles:
+  ads: https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0001-8047-8351&sort=date%20desc%2C%20bibcode%20desc
+  orcid: https://orcid.org/0000-0001-8047-8351
+  github: https://github.com/kelceydavis33
+  arxiv: https://arxiv.org/a/davis_k_1
+  scholar: ""          # paste your Google Scholar profile URL here
+  linkedin: https://www.linkedin.com/in/kelcey-davis
+
+cv_file: /assets/cv.pdf
+
+# ---------------------------------------------------------------------------
+# Build settings. You should not need to touch these.
+# ---------------------------------------------------------------------------
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+sass:
+  style: compressed
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - scripts/
+  - vendor/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
