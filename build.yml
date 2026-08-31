@@ -1,0 +1,79 @@
+name: Build site and refresh publications
+
+on:
+  # Rebuild whenever you edit the site.
+  push:
+    branches: [main]
+  # Refresh from ADS at 07:00 UTC on the first of every month.
+  schedule:
+    - cron: "0 7 1 * *"
+  # Lets you refresh on demand from the Actions tab.
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      # The ADS refresh only runs on a schedule or when you trigger it by
+      # hand. An ordinary push just rebuilds the site with the data already
+      # committed, which keeps edits fast and stays well inside the ADS
+      # rate limit.
+      - name: Set up Python
+        if: github.event_name != 'push'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Python dependencies
+        if: github.event_name != 'push'
+        run: pip install -r scripts/requirements.txt
+
+      - name: Refresh publications from NASA ADS
+        if: github.event_name != 'push'
+        env:
+          ADS_TOKEN: ${{ secrets.ADS_TOKEN }}
+        run: python scripts/update_publications.py
+
+      - name: Commit the refreshed data
+        if: github.event_name != 'push'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add _data/publications.json _data/wordcloud.json
+          git diff --staged --quiet || git commit -m "Refresh publications from ADS"
+          git push
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+
+      - name: Upload the built site
+        uses: actions/upload-pages-artifact@v3
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
