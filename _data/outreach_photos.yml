@@ -1,16 +1,16 @@
 # Grouped by section so each gallery sits under its own heading.
 stemarts:
-  - image: /assets/img/outreach/livecode.jpeg
+  - image: /assets/img/livecode.jpeg
     caption: Presenting an audio file and the CAPERS spectrum it was generated from
 
 planetarium:
-  - image: /assets/img/outreach/planetarium.png
+  - image: /assets/img/planetarium.png
     caption: A weekly public show at UConn Cynthia Wyeth Peterson Memorial Planetarium
-  - image: /assets/img/outreach/planetarium2.jpg
+  - image: /assets/img/planetarium2.jpg
     caption: A weekly public show at UConn Cynthia Wyeth Peterson Memorial Planetarium
-  - image: /assets/img/outreach/planetarium3.jpg
+  - image: /assets/img/planetarium3.jpg
     caption: A weekly public show at UConn Cynthia Wyeth Peterson Memorial Planetarium
-  - image: /assets/img/outreach/observing1.png
+  - image: /assets/img/observing1.png
     caption: Looking through the telescope at the UConn observatory
 
 
