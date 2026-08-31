@@ -1,0 +1,12 @@
+<div class="videos">
+  {% for video in include.videos %}
+  <figure class="video-item">
+    <iframe src="https://www.youtube-nocookie.com/embed/{{ video.id }}"
+            title="{{ video.title }}"
+            loading="lazy"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    {% if video.caption %}<figcaption>{{ video.caption }}</figcaption>{% endif %}
+  </figure>
+  {% endfor %}
+</div>
