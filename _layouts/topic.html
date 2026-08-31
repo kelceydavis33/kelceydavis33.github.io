@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+{% assign topic = site.data.topics[page.topic_id] %}
+
+<div class="topic-head topic-{{ page.topic_id }}">
+  <h1 class="page-title">{{ page.title }}</h1>
+  <figure class="topic-figure">
+    <img src="{{ topic.image | relative_url }}" alt="{{ topic.image_alt | default: page.title }}">
+    {% if topic.image_caption %}<figcaption>{{ topic.image_caption }}</figcaption>{% endif %}
+  </figure>
+</div>
+
+<div class="prose">
+  {{ content }}
+</div>
+
+{% assign tagged = site.data.publications.papers | where_exp: "paper", "paper.topics contains page.topic_id" %}
+{% assign led = tagged | where: "role", "first" %}
+{% assign supporting = tagged | where: "role", "co" %}
+
+<section class="papers">
+  <h2>Papers I led</h2>
+  {% if led.size > 0 %}
+    {% include paper-list.html papers=led %}
+  {% else %}
+    <p class="empty">No first-author papers are tagged with this topic yet. Add a bibcode under
+    <code>{{ page.topic_id }}: always:</code> in <code>_data/topics.yml</code> to place one here.</p>
+  {% endif %}
+</section>
+
+<section class="papers">
+  <h2>Papers I contributed to</h2>
+  {% if supporting.size > 0 %}
+    {% include paper-list.html papers=supporting %}
+  {% else %}
+    <p class="empty">No co-authored papers are tagged with this topic yet. Adjust the keywords under
+    <code>{{ page.topic_id }}:</code> in <code>_data/topics.yml</code> to catch more of them.</p>
+  {% endif %}
+</section>

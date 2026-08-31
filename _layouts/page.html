@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+{% if page.title and page.hide_title != true %}
+<h1 class="page-title">{{ page.title }}</h1>
+{% endif %}
+
+{% if page.lede %}
+<p class="lede">{{ page.lede }}</p>
+{% endif %}
+
+<div class="prose">
+  {{ content }}
+</div>
