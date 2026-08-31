@@ -7,7 +7,10 @@ lede: >-
   National Laboratory. I study the first billion years of galaxy and black hole
   growth with JWST, and I design the surveys that go looking for them.
 ---
-
+<div class="hero">
+  <img src="{{ '/assets/img/CEERS11.jpg' | relative_url }}"
+       alt="A deep JWST NIRCam image of the CEERS field, dense with faint galaxies">
+</div>
 <figure class="bandpasses">
   {% include bandpasses.svg %}
   <figcaption class="figure-note">
