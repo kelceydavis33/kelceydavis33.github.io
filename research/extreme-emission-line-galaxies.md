@@ -13,3 +13,11 @@ I study extremely high equivalent width (EW) rest-optical lines (H$\alpha$, [OII
 My photometric EELG catalog has provided target selections for several spectroscopic surveys (OCEANS, THRILS, and CEERS). Many other spectroscopic programs also targeted these EELGs in the CEERS field and I compiled a master catalog across the RUBIES, CAPERS, and THRILS surveys, in addition to the original CEERS spectroscopy, to evaluate the performance of photometric EELG identification . I demonstrated that recovery of line broadening, which signposts AGN activity, was directly tied to survey depth and that many EELGs hosted AGN. However, the EELGs with AGN either had falsely boosted EWs from sources with red optical continua but blue UV continua (i.e.: those with LRD-shaped energy distributions) or were consistent with composite systems. The EELGs without AGN and composite systems both showed no strong evidence for AGN dominated emission, with no high-ionization line detections in individual sources or stacks. The true EELGs, with and without broad-line AGN, were consistent with the same regions of line diagnostic diagrams which implied low metallicity, high ionization conditions and had similar emission line morphologies. This implied the same processes were driving the extreme emission in EELGs with and without AGN components. 
 
 This work motivated an observing proposal to add medium bands to the CEERS field of view, my SPAM proposal detailed in the observing design tab.
+
+
+{% include blink.html
+   a="/assets/img/eelg-spikes.png"
+   b="/assets/img/eelg-conts.png"
+   alt_a="Emission line maps of the 100 brightest EELGs"
+   alt_b="Continuum maps of the same 100 galaxies"
+   caption="The 100 brightest EELGs in Davis 2024, alternating between line emission and continuum postage stamps." %}
