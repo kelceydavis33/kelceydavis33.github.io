@@ -1,0 +1,9 @@
+<figure class="blink">
+  <div class="blink-frames">
+    <img src="{{ include.a | relative_url }}" alt="{{ include.alt_a }}">
+    <img src="{{ include.b | relative_url }}" alt="{{ include.alt_b }}">
+  </div>
+  <input type="checkbox" id="blink-pause" class="blink-pause">
+  <label for="blink-pause">Pause the blink</label>
+  {% if include.caption %}<figcaption>{{ include.caption }}</figcaption>{% endif %}
+</figure>
