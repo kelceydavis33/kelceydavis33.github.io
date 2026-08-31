@@ -512,3 +512,37 @@ code {
   line-height: 1.45;
   margin-top: 0.5rem;
 }
+
+.blink { margin: 2rem 0 2.5rem; max-width: var(--measure); }
+.blink-frames { position: relative; }
+.blink-frames img { width: 100%; display: block; }
+.blink-frames img + img {
+  position: absolute;
+  inset: 0;
+  animation: blink 3s steps(1, end) infinite;
+}
+@keyframes blink { 0%, 49% { opacity: 0; } 50%, 100% { opacity: 1; } }
+
+.blink:has(.blink-pause:checked) .blink-frames img + img {
+  animation-play-state: paused;
+}
+
+.blink-pause { position: absolute; opacity: 0; pointer-events: none; }
+.blink-pause + label {
+  display: inline-block;
+  margin-top: 0.6rem;
+  font-size: var(--t-xs);
+  color: var(--ink-soft);
+  border-bottom: 1px solid var(--rule);
+  cursor: pointer;
+}
+.blink-pause:focus-visible + label { outline: 2px solid var(--plum); outline-offset: 3px; }
+.blink-pause:checked + label::after { content: " (paused)"; }
+
+.blink figcaption { font-size: var(--t-xs); color: var(--ink-soft); margin-top: 0.5rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  .blink-frames { display: grid; gap: 1rem; }
+  .blink-frames img + img { position: static; animation: none; opacity: 1; }
+  .blink-pause + label { display: none; }
+}
