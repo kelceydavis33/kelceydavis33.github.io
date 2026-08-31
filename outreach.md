@@ -20,6 +20,9 @@ Summer 2025 – present
   understood the data they were performing, and gave a public talk at the Taos
   film festival where they premiered their pieces.
 
+{% include videos.html videos=site.data.outreach_videos.stemarts %}
+
+
 ## Planetarium presenter, Pajarito Environmental Education Center (PEEC)
 Los Alamos, summer 2025 – present
 
