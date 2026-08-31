@@ -1,0 +1,491 @@
+/* ==========================================================================
+   Kelcey Davis — personal site
+   Palette is taken from the things the research is about: the oxidised red of
+   a little red dot, the [O III] teal of an extreme emission line galaxy, and
+   the blue-violet of a short-wavelength medium band. Plum carries links.
+   ========================================================================== */
+
+:root {
+  --paper:      #fcfbf9;
+  --paper-sunk: #f2f1ed;
+  --ink:        #1b1e26;
+  --ink-soft:   #5c6270;
+  --rule:       #dedcd6;
+
+  --plum:        #4a2545;
+  --plum-bright: #743d6c;
+
+  --lrd:    #a32e1e;
+  --eelg:   #1b6f62;
+  --survey: #3b4c99;
+
+  --serif: "Newsreader", Georgia, serif;
+  --sans:  "Public Sans", system-ui, -apple-system, sans-serif;
+
+  --t-xs:  0.8125rem;
+  --t-sm:  0.9375rem;
+  --t-lg:  1.1875rem;
+  --t-xl:  1.5rem;
+  --t-2xl: 2rem;
+  --t-3xl: 2.625rem;
+
+  --measure: 39rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper:      #16181c;
+    --paper-sunk: #1f2229;
+    --ink:        #e7e5e0;
+    --ink-soft:   #9aa0ac;
+    --rule:       #32363f;
+
+    --plum:        #d5a7cd;
+    --plum-bright: #eec5e7;
+
+    --lrd:    #e08672;
+    --eelg:   #6dc0b0;
+    --survey: #93a5e8;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { font-size: 17px; -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  font-synthesis-weight: none;
+}
+
+a { color: var(--plum); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { color: var(--plum-bright); }
+a:focus-visible,
+.skip:focus {
+  outline: 2px solid var(--plum);
+  outline-offset: 3px;
+  border-radius: 1px;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+code {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  font-size: 0.85em;
+  background: var(--paper-sunk);
+  padding: 0.1em 0.35em;
+  border-radius: 2px;
+}
+
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--paper);
+  padding: 0.75rem 1rem;
+  z-index: 10;
+}
+.skip:focus { left: 0; }
+
+/* --------------------------------------------------------------------------
+   Layout: fixed rail on the left, single column of reading matter on the right
+   -------------------------------------------------------------------------- */
+
+.layout {
+  display: grid;
+  grid-template-columns: 15rem minmax(0, 1fr);
+  gap: 4.5rem;
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 3.5rem 2rem 5rem;
+}
+
+.rail-inner { position: sticky; top: 3.5rem; }
+
+.identity { display: block; text-decoration: none; color: inherit; }
+.identity:hover .identity-name { color: var(--plum); }
+
+.identity-name {
+  display: block;
+  font-family: var(--serif);
+  font-size: var(--t-xl);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.4rem;
+}
+
+.identity-role {
+  display: block;
+  font-size: var(--t-xs);
+  color: var(--ink-soft);
+  line-height: 1.45;
+}
+
+.nav { margin: 2.25rem 0; }
+.nav ul { list-style: none; margin: 0; padding: 0; }
+.nav > ul > li { margin-bottom: 0.55rem; }
+
+.nav a {
+  text-decoration: none;
+  font-size: var(--t-sm);
+  color: var(--ink);
+  display: inline-block;
+  padding: 0.1rem 0;
+}
+.nav a:hover { color: var(--plum); text-decoration: underline; }
+.nav a[aria-current="page"] { color: var(--plum); font-weight: 600; }
+
+.nav-sub { margin: 0.4rem 0 0.9rem 0; }
+.nav-sub li { margin-bottom: 0.3rem; }
+.nav-sub a { font-size: var(--t-xs); color: var(--ink-soft); }
+
+/* the swatch says which topic, so it earns its place */
+.topic-link::before {
+  content: "";
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-right: 0.5rem;
+  vertical-align: 0.02em;
+  background: currentColor;
+}
+.topic-lrd::before    { background: var(--lrd); }
+.topic-eelg::before   { background: var(--eelg); }
+.topic-survey::before { background: var(--survey); }
+
+.rail-contact {
+  border-top: 1px solid var(--rule);
+  padding-top: 1rem;
+  font-size: var(--t-xs);
+  line-height: 1.7;
+}
+.rail-contact > a { display: block; word-break: break-word; }
+.rail-links { display: block; margin-top: 0.35rem; }
+.rail-links a { margin-right: 0.7rem; }
+
+/* --------------------------------------------------------------------------
+   Content
+   -------------------------------------------------------------------------- */
+
+.content { min-width: 0; }
+
+.page-title {
+  font-family: var(--serif);
+  font-size: var(--t-3xl);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  margin: 0 0 1rem;
+}
+
+.lede {
+  font-family: var(--serif);
+  font-size: var(--t-lg);
+  line-height: 1.5;
+  color: var(--ink-soft);
+  max-width: var(--measure);
+  margin: 0 0 2rem;
+}
+
+.prose { max-width: none; }
+.prose > p, .prose > ul, .prose > ol, .prose > h2, .prose > h3,
+.prose > blockquote, .prose > table { max-width: var(--measure); }
+.prose p, .prose ul, .prose ol { margin: 0 0 1.15rem; }
+.prose ul, .prose ol { padding-left: 1.2rem; }
+.prose li { margin-bottom: 0.4rem; }
+
+.prose h2 {
+  font-family: var(--serif);
+  font-size: var(--t-xl);
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 2.5rem 0 0.75rem;
+}
+
+.prose h3 {
+  font-size: var(--t-lg);
+  font-weight: 600;
+  margin: 2rem 0 0.5rem;
+}
+
+.placeholder {
+  border-left: 2px solid var(--rule);
+  padding: 0.1rem 0 0.1rem 1.1rem;
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+/* --------------------------------------------------------------------------
+   Homepage figure: JWST filter bandpasses
+   -------------------------------------------------------------------------- */
+
+.bandpasses {
+  max-width: none;
+  margin: 2.5rem 0 3rem;
+}
+.bandpasses svg { width: 100%; height: auto; }
+
+.figure-note {
+  font-size: var(--t-xs);
+  color: var(--ink-soft);
+  max-width: var(--measure);
+  margin: 0.75rem 0 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .bandpasses .band-line {
+    stroke-dasharray: 900;
+    stroke-dashoffset: 900;
+    animation: draw 1.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  .bandpasses .band-fill { opacity: 0; animation: fade 1.4s ease-out 0.7s forwards; }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  /* Must land on the same value as the fill-opacity attribute in the SVG:
+     a CSS animation overrides that attribute, so ending at 1 would turn the
+     wide bands solid. */
+  @keyframes fade { to { opacity: 0.075; } }
+}
+
+/* --------------------------------------------------------------------------
+   Research index cards
+   -------------------------------------------------------------------------- */
+
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11.5rem, 1fr));
+  gap: 1.75rem;
+  margin: 2.5rem 0 1rem;
+  max-width: none;
+}
+
+.topic-card { text-decoration: none; color: inherit; display: block; }
+.topic-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--paper-sunk);
+  border-bottom: 3px solid var(--rule);
+}
+.topic-card.topic-lrd img    { border-bottom-color: var(--lrd); }
+.topic-card.topic-eelg img   { border-bottom-color: var(--eelg); }
+.topic-card.topic-survey img { border-bottom-color: var(--survey); }
+
+.topic-card h2 {
+  font-family: var(--serif);
+  font-size: var(--t-lg);
+  font-weight: 500;
+  margin: 0.85rem 0 0.3rem;
+}
+.topic-card:hover h2 { color: var(--plum); text-decoration: underline; }
+.topic-card p { margin: 0; font-size: var(--t-sm); color: var(--ink-soft); }
+
+/* --------------------------------------------------------------------------
+   Topic page
+   -------------------------------------------------------------------------- */
+
+.topic-head { margin-bottom: 1.5rem; }
+
+.topic-figure { margin: 0 0 1.5rem; max-width: 28rem; }
+.topic-figure img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--paper-sunk);
+  border-bottom: 3px solid var(--rule);
+}
+.topic-lrd .topic-figure img    { border-bottom-color: var(--lrd); }
+.topic-eelg .topic-figure img   { border-bottom-color: var(--eelg); }
+.topic-survey .topic-figure img { border-bottom-color: var(--survey); }
+
+.topic-figure figcaption {
+  font-size: var(--t-xs);
+  color: var(--ink-soft);
+  margin-top: 0.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   Publication lists
+   -------------------------------------------------------------------------- */
+
+.papers { max-width: var(--measure); margin-top: 3rem; }
+
+.papers h2 {
+  font-family: var(--serif);
+  font-size: var(--t-xl);
+  font-weight: 500;
+  margin: 0 0 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.paper-list { list-style: none; margin: 0; padding: 0; }
+
+.paper {
+  padding: 0 0 1.15rem;
+  margin-bottom: 1.15rem;
+  border-bottom: 1px solid var(--rule);
+}
+.paper:last-child { border-bottom: none; margin-bottom: 0; }
+
+.paper-title {
+  font-family: var(--serif);
+  font-size: var(--t-lg);
+  font-weight: 500;
+  line-height: 1.3;
+  text-decoration: none;
+  color: var(--ink);
+  display: block;
+}
+.paper-title:hover { color: var(--plum); text-decoration: underline; }
+
+.paper-meta { margin: 0.4rem 0 0.5rem; font-size: var(--t-sm); color: var(--ink-soft); }
+.paper-authors { display: block; }
+.paper-source { display: block; font-style: italic; }
+
+.paper-links { margin: 0; font-size: var(--t-xs); }
+.paper-links a { margin-right: 0.9rem; }
+.paper-cites { color: var(--ink-soft); }
+
+.year-heading {
+  font-family: var(--serif);
+  font-size: var(--t-lg);
+  font-weight: 600;
+  color: var(--ink-soft);
+  margin: 2rem 0 0.9rem;
+}
+.year-heading:first-of-type { margin-top: 0; }
+
+.empty { font-size: var(--t-sm); color: var(--ink-soft); }
+
+/* --------------------------------------------------------------------------
+   Word cloud and citation statistics
+   -------------------------------------------------------------------------- */
+
+.wordcloud {
+  max-width: none;
+  margin: 0 0 3rem;
+  padding: 2rem 1.5rem;
+  background: var(--paper-sunk);
+  font-family: var(--serif);
+  line-height: 1.35;
+  text-align: center;
+}
+
+.wordcloud a {
+  display: inline-block;
+  margin: 0.1rem 0.45rem;
+  text-decoration: none;
+  color: var(--ink-soft);
+  vertical-align: middle;
+}
+.wordcloud a:hover { color: var(--plum); text-decoration: underline; }
+.wordcloud .w1 { font-size: 0.9rem; }
+.wordcloud .w2 { font-size: 1.15rem; }
+.wordcloud .w3 { font-size: 1.5rem; color: var(--ink); }
+.wordcloud .w4 { font-size: 2rem;   color: var(--ink); font-weight: 500; }
+.wordcloud .w5 { font-size: 2.6rem; color: var(--plum); font-weight: 500; }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: 1.5rem 2rem;
+  margin: 2.75rem 0 1.25rem;
+  padding: 0;
+  max-width: none;
+}
+.stats div { margin: 0; }
+.stats dt { font-size: var(--t-xs); color: var(--ink-soft); }
+.stats dd {
+  margin: 0.1rem 0 0;
+  font-family: var(--serif);
+  font-size: var(--t-2xl);
+  font-weight: 500;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+.updated { font-size: var(--t-xs); color: var(--ink-soft); }
+
+/* --------------------------------------------------------------------------
+   CV
+   -------------------------------------------------------------------------- */
+
+.cv-actions { margin: 0 0 1.75rem; }
+
+.cv-download {
+  display: inline-block;
+  font-size: var(--t-sm);
+  text-decoration: none;
+  color: var(--paper);
+  background: var(--plum);
+  padding: 0.55rem 1.1rem;
+}
+.cv-download:hover { background: var(--plum-bright); color: var(--paper); }
+
+.cv-embed {
+  width: 100%;
+  height: 85vh;
+  min-height: 30rem;
+  border: 1px solid var(--rule);
+  background: var(--paper-sunk);
+  max-width: none;
+}
+
+.cv-fallback { padding: 2rem; font-size: var(--t-sm); }
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+
+.site-footer {
+  margin-top: 5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+  font-size: var(--t-xs);
+  color: var(--ink-soft);
+  max-width: var(--measure);
+}
+.site-footer p { margin: 0 0 0.35rem; }
+.site-footer .fine { color: var(--ink-soft); }
+
+/* --------------------------------------------------------------------------
+   Narrow screens
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 56rem) {
+  html { font-size: 16px; }
+
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 2rem 1.25rem 3.5rem;
+  }
+
+  .rail-inner { position: static; }
+
+  .rail {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 1.5rem;
+  }
+
+  .nav { margin: 1.5rem 0 1.25rem; }
+  .nav > ul { display: flex; flex-wrap: wrap; gap: 0 1.4rem; }
+  .nav > ul > li { margin-bottom: 0; }
+  /* The research page shows all three topics as image cards, which works
+     better than a second row of links on a small screen. */
+  .nav-sub { display: none; }
+
+  .bandpasses .tick-label { display: none; }
+
+  .page-title { font-size: var(--t-2xl); }
+  .wordcloud { padding: 1.5rem 1rem; }
+  .wordcloud .w5 { font-size: 1.9rem; }
+  .wordcloud .w4 { font-size: 1.5rem; }
+  .cv-embed { height: 70vh; }
+}
