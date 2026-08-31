@@ -21,3 +21,7 @@ This work motivated an observing proposal to add medium bands to the CEERS field
    alt_a="Emission line maps of the 100 brightest EELGs"
    alt_b="Continuum maps of the same 100 galaxies"
    caption="The 100 brightest EELGs in Davis 2024, alternating between line emission and continuum postage stamps." %}
+
+Full-resolution versions:
+[line bands](/assets/figures/eelg-spikes.pdf) and
+[continuum bands](/assets/figures/eelg-conts.pdf).
