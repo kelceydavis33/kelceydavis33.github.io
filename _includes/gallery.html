@@ -1,0 +1,9 @@
+<div class="gallery">
+  {% for photo in include.photos %}
+  <figure class="gallery-item">
+    <img src="{{ photo.image | relative_url }}"
+         alt="{{ photo.alt | default: photo.caption }}" loading="lazy">
+    {% if photo.caption %}<figcaption>{{ photo.caption }}</figcaption>{% endif %}
+  </figure>
+  {% endfor %}
+</div>
