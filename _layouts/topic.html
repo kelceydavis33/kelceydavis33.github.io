@@ -20,51 +20,61 @@ layout: default
   Which papers land here is read straight from _data/paper_topics.yml, so
   editing that file takes effect on the next build. There is no need to
   re-run the ADS refresh after retagging a paper.
+
+  The first section normally lists papers you led. A page can single out a
+  different author position instead by setting lead_position in its front
+  matter, along with a heading to match:
+
+    lead_position: 2
+    lead_heading: Second-author publications
 {% endcomment %}
 
-{% assign led_count = 0 %}
-{% assign co_count = 0 %}
+{% assign lead_position = page.lead_position | default: 1 %}
+{% assign lead_heading = page.lead_heading | default: "Papers I led" %}
+{% assign rest_heading = page.rest_heading | default: "Papers I contributed to" %}
+
+{% assign lead_count = 0 %}
+{% assign rest_count = 0 %}
 {% for paper in site.data.publications.papers %}
   {% assign entry = site.data.paper_topics[paper.bibcode] %}
   {% if entry.topics contains page.topic_id %}
-    {% if paper.role == "first" %}
-      {% assign led_count = led_count | plus: 1 %}
+    {% if paper.author_position == lead_position %}
+      {% assign lead_count = lead_count | plus: 1 %}
     {% else %}
-      {% assign co_count = co_count | plus: 1 %}
+      {% assign rest_count = rest_count | plus: 1 %}
     {% endif %}
   {% endif %}
 {% endfor %}
 
 <section class="papers">
-  <h2>Papers I led</h2>
-  {% if led_count > 0 %}
+  <h2>{{ lead_heading }}</h2>
+  {% if lead_count > 0 %}
   <ul class="paper-list">
     {% for paper in site.data.publications.papers %}
       {% assign entry = site.data.paper_topics[paper.bibcode] %}
-      {% if entry.topics contains page.topic_id and paper.role == "first" %}
+      {% if entry.topics contains page.topic_id and paper.author_position == lead_position %}
         {% include paper-entry.html paper=paper %}
       {% endif %}
     {% endfor %}
   </ul>
   {% else %}
-  <p class="empty">No first-author papers are assigned to this area yet. Add
-  <code>{{ page.topic_id }}</code> to a paper's topics list in
-  <code>_data/paper_topics.yml</code>.</p>
+  <p class="empty">Nothing here yet. Add <code>{{ page.topic_id }}</code> to a
+  paper's topics list in <code>_data/paper_topics.yml</code>.</p>
   {% endif %}
 </section>
 
 <section class="papers">
-  <h2>Papers I contributed to</h2>
-  {% if co_count > 0 %}
+  <h2>{{ rest_heading }}</h2>
+  {% if rest_count > 0 %}
   <ul class="paper-list">
     {% for paper in site.data.publications.papers %}
       {% assign entry = site.data.paper_topics[paper.bibcode] %}
-      {% if entry.topics contains page.topic_id and paper.role != "first" %}
+      {% if entry.topics contains page.topic_id and paper.author_position != lead_position %}
         {% include paper-entry.html paper=paper %}
       {% endif %}
     {% endfor %}
   </ul>
   {% else %}
-  <p class="empty">No co-authored papers are assigned to this area yet.</p>
+  <p class="empty">No other papers are assigned to this area yet.</p>
   {% endif %}
 </section>
