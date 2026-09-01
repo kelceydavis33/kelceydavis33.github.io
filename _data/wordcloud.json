@@ -2,52 +2,46 @@
   "updated": "2026-09-01",
   "words": [
     {
+      "text": "active",
+      "count": 17,
+      "weight": 1,
+      "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22active%22"
+    },
+    {
       "text": "agn",
       "count": 45,
-      "weight": 4,
+      "weight": 5,
       "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22agn%22"
     },
     {
       "text": "balmer",
       "count": 20,
-      "weight": 1,
+      "weight": 2,
       "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22balmer%22"
     },
     {
       "text": "black",
       "count": 25,
-      "weight": 2,
+      "weight": 3,
       "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22black%22"
     },
     {
       "text": "broad",
       "count": 25,
-      "weight": 2,
+      "weight": 3,
       "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22broad%22"
     },
     {
       "text": "ceers",
       "count": 32,
-      "weight": 3,
+      "weight": 4,
       "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22ceers%22"
-    },
-    {
-      "text": "consistent",
-      "count": 19,
-      "weight": 1,
-      "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22consistent%22"
     },
     {
       "text": "continuum",
       "count": 19,
       "weight": 1,
       "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22continuum%22"
-    },
-    {
-      "text": "data",
-      "count": 22,
-      "weight": 2,
-      "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22data%22"
     },
     {
       "text": "deep",
@@ -70,8 +64,14 @@
     {
       "text": "emission",
       "count": 46,
-      "weight": 4,
+      "weight": 5,
       "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22emission%22"
+    },
+    {
+      "text": "emission-line",
+      "count": 17,
+      "weight": 1,
+      "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22emission-line%22"
     },
     {
       "text": "evolution",
@@ -82,14 +82,20 @@
     {
       "text": "extreme",
       "count": 20,
-      "weight": 1,
+      "weight": 2,
       "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22extreme%22"
     },
     {
       "text": "formation",
       "count": 32,
-      "weight": 3,
+      "weight": 4,
       "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22formation%22"
+    },
+    {
+      "text": "galactic",
+      "count": 17,
+      "weight": 1,
+      "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22galactic%22"
     },
     {
       "text": "galaxies",
@@ -106,7 +112,7 @@
     {
       "text": "high",
       "count": 20,
-      "weight": 1,
+      "weight": 2,
       "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22high%22"
     },
     {
@@ -122,6 +128,12 @@
       "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22iii%22"
     },
     {
+      "text": "ionization",
+      "count": 17,
+      "weight": 1,
+      "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22ionization%22"
+    },
+    {
       "text": "jwst",
       "count": 38,
       "weight": 4,
@@ -130,7 +142,7 @@
     {
       "text": "line",
       "count": 24,
-      "weight": 2,
+      "weight": 3,
       "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22line%22"
     },
     {
@@ -148,7 +160,7 @@
     {
       "text": "lrds",
       "count": 25,
-      "weight": 2,
+      "weight": 3,
       "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22lrds%22"
     },
     {
@@ -158,21 +170,9 @@
       "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22mass%22"
     },
     {
-      "text": "mml",
-      "count": 174,
-      "weight": 5,
-      "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22mml%22"
-    },
-    {
-      "text": "mrow",
-      "count": 42,
-      "weight": 4,
-      "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22mrow%22"
-    },
-    {
       "text": "nircam",
       "count": 20,
-      "weight": 1,
+      "weight": 2,
       "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22nircam%22"
     },
     {
@@ -184,14 +184,14 @@
     {
       "text": "observations",
       "count": 20,
-      "weight": 1,
+      "weight": 2,
       "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22observations%22"
     },
     {
-      "text": "present",
-      "count": 28,
-      "weight": 3,
-      "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22present%22"
+      "text": "photometric",
+      "count": 18,
+      "weight": 1,
+      "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22photometric%22"
     },
     {
       "text": "properties",
@@ -200,15 +200,21 @@
       "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22properties%22"
     },
     {
+      "text": "ratios",
+      "count": 16,
+      "weight": 1,
+      "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22ratios%22"
+    },
+    {
       "text": "red",
       "count": 30,
-      "weight": 3,
+      "weight": 4,
       "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22red%22"
     },
     {
       "text": "redshift",
       "count": 26,
-      "weight": 2,
+      "weight": 3,
       "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22redshift%22"
     },
     {
@@ -224,16 +230,22 @@
       "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22sample%22"
     },
     {
-      "text": "sim",
-      "count": 18,
+      "text": "significant",
+      "count": 16,
       "weight": 1,
-      "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22sim%22"
+      "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22significant%22"
     },
     {
       "text": "sources",
       "count": 19,
-      "weight": 1,
+      "weight": 2,
       "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22sources%22"
+    },
+    {
+      "text": "spectroscopic",
+      "count": 17,
+      "weight": 1,
+      "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22spectroscopic%22"
     },
     {
       "text": "spectroscopy",
@@ -250,20 +262,8 @@
     {
       "text": "stellar",
       "count": 34,
-      "weight": 3,
-      "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22stellar%22"
-    },
-    {
-      "text": "sub",
-      "count": 82,
-      "weight": 5,
-      "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22sub%22"
-    },
-    {
-      "text": "sup",
-      "count": 64,
       "weight": 4,
-      "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22sup%22"
+      "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22stellar%22"
     },
     {
       "text": "survey",
