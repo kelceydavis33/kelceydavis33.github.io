@@ -10,8 +10,7 @@ permalink: /cv/
 
 <object class="cv-embed" data="{{ site.cv_file | relative_url }}" type="application/pdf">
   <div class="cv-fallback">
-    <p>Your browser will not display the PDF inline. Use the download button above
-    to open it, or read it directly at
+    <p>If your browser will not read the PDF directly, you can download it at:
     <a href="{{ site.cv_file | relative_url }}">{{ site.cv_file }}</a>.</p>
   </div>
 </object>
