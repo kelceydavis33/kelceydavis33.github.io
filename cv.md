@@ -17,6 +17,5 @@ permalink: /cv/
 </object>
 
 <p class="figure-note">
-To update this page, replace <code>assets/cv.pdf</code> in the repository with a
-new file of the same name. Nothing else needs to change.
+Last updated 9/1/2026
 </p>
