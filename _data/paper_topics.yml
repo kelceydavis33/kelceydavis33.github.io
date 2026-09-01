@@ -4,7 +4,7 @@
 # than one area, or to none, in which case it only shows up on the
 # publications page.
 #
-# Available areas: lrd, eelg, survey
+# Available areas: lrd, eelg, survey, other
 #
 # New papers are added here automatically with an empty list each
 # time the publications are refreshed from ADS. Your edits are never

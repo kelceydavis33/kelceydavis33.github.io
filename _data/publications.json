@@ -14,6 +14,7 @@
       "title": "The Lifetimes of High-redshift Quasars Suggest Magnetic Disk Support",
       "authors_short": "Johnson, J., Upton Sanderbeck, P., Lloyd-Ronning, N., et al. (incl. Davis, K.)",
       "author_count": 5,
+      "author_position": 5,
       "year": 2026,
       "pubdate": "2026-07-00",
       "reference": "ApJ, 1006, 84 (2026)",
@@ -23,13 +24,16 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2026ApJ..1006...84J/abstract",
       "url_arxiv": "https://arxiv.org/abs/2606.30734",
       "url_doi": "https://doi.org/10.3847/1538-4357/ae83a6",
-      "topics": []
+      "topics": [
+        "other"
+      ]
     },
     {
       "bibcode": "2026arXiv260623683R",
       "title": "Little Red Dots on FIRE: Exploring the formation and observational signatures of ultra-compact early galaxies",
       "authors_short": "Roy, N. C., Angl\u00e9s-Alc\u00e1zar, D., Cochrane, R. K., et al. (incl. Davis, K.)",
       "author_count": 18,
+      "author_position": 13,
       "year": 2026,
       "pubdate": "2026-06-00",
       "reference": "Preprint, 2026",
@@ -39,13 +43,16 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2026arXiv260623683R/abstract",
       "url_arxiv": "https://arxiv.org/abs/2606.23683",
       "url_doi": "https://doi.org/10.48550/arXiv.2606.23683",
-      "topics": []
+      "topics": [
+        "other"
+      ]
     },
     {
       "bibcode": "2026arXiv260606575G",
       "title": "The quasi-star model for Little Red Dots: potential and challenges",
       "authors_short": "Gentile, F., Giavalisco, M., Daddi, E., et al. (incl. Davis, K.)",
       "author_count": 28,
+      "author_position": 11,
       "year": 2026,
       "pubdate": "2026-06-00",
       "reference": "Preprint, 2026",
@@ -55,13 +62,16 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2026arXiv260606575G/abstract",
       "url_arxiv": "https://arxiv.org/abs/2606.06575",
       "url_doi": "https://doi.org/10.48550/arXiv.2606.06575",
-      "topics": []
+      "topics": [
+        "lrd"
+      ]
     },
     {
       "bibcode": "2026arXiv260600258D",
       "title": "OCEANS of Absorption: High-resolution NIRSpec Spectroscopy Reveals Diverse Balmer-line Absorption in Little Red Dots",
       "authors_short": "Davis, K., Brooks, M., Simons, R. C., et al.",
       "author_count": 27,
+      "author_position": 1,
       "year": 2026,
       "pubdate": "2026-05-00",
       "reference": "Preprint, 2026",
@@ -71,13 +81,17 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2026arXiv260600258D/abstract",
       "url_arxiv": "https://arxiv.org/abs/2606.00258",
       "url_doi": "https://doi.org/10.48550/arXiv.2606.00258",
-      "topics": []
+      "topics": [
+        "lrd",
+        "survey"
+      ]
     },
     {
       "bibcode": "2026ApJ..1002..129B",
       "title": "Beyond the Monsters: A More Complete Census of Black Hole Activity at Cosmic Dawn",
       "authors_short": "Brooks, M., Trump, J. R., Simons, R. C., et al. (incl. Davis, K.)",
       "author_count": 22,
+      "author_position": 8,
       "year": 2026,
       "pubdate": "2026-05-00",
       "reference": "ApJ, 1002, 129 (2026)",
@@ -87,13 +101,16 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2026ApJ..1002..129B/abstract",
       "url_arxiv": "https://arxiv.org/abs/2511.19609",
       "url_doi": "https://doi.org/10.3847/1538-4357/ae5652",
-      "topics": []
+      "topics": [
+        "lrd"
+      ]
     },
     {
       "bibcode": "2026A&A...708A.152L",
       "title": "Extreme equivalent-width-selected low-mass starbursts at z = 4 \u2212 9: Insights into their role in cosmic reionization",
       "authors_short": "Llerena, M., Pentericci, L., Amor\u00edn, R., et al. (incl. Davis, K.)",
       "author_count": 25,
+      "author_position": 13,
       "year": 2026,
       "pubdate": "2026-04-00",
       "reference": "A&A, 708, A152 (2026)",
@@ -103,13 +120,16 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2026A%26A...708A.152L/abstract",
       "url_arxiv": "https://arxiv.org/abs/2510.25647",
       "url_doi": "https://doi.org/10.1051/0004-6361/202557897",
-      "topics": []
+      "topics": [
+        "eelg"
+      ]
     },
     {
       "bibcode": "2026PhPl...33c2701W",
       "title": "Quantum fluctuations in dense plasma simulations",
       "authors_short": "White, J. R., Johnson, C. E., Davis, K. S., et al. (incl. Davis, K.)",
       "author_count": 6,
+      "author_position": 3,
       "year": 2026,
       "pubdate": "2026-03-00",
       "reference": "PhPl, 33, 032701 (2026)",
@@ -119,13 +139,16 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2026PhPl...33c2701W/abstract",
       "url_arxiv": "",
       "url_doi": "https://doi.org/10.1063/5.0312332",
-      "topics": []
+      "topics": [
+        "other"
+      ]
     },
     {
       "bibcode": "2026HEDP...5801270T",
       "title": "Electron-impact ionization from excited states method",
       "authors_short": "Tan, H. B. T., Davis, K. S., Johnson, C. E., et al. (incl. Davis, K.)",
       "author_count": 6,
+      "author_position": 2,
       "year": 2026,
       "pubdate": "2026-03-00",
       "reference": "HEDP, 58, 101270 (2026)",
@@ -135,13 +158,16 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2026HEDP...5801270T/abstract",
       "url_arxiv": "",
       "url_doi": "https://doi.org/10.1016/j.hedp.2026.101270",
-      "topics": []
+      "topics": [
+        "other"
+      ]
     },
     {
       "bibcode": "2026ApJ...999L...6M",
       "title": "A Morphology Catalog of Galaxies in CEERS: Evolution in the Size and Color Gradients of Galaxies Since Cosmic Dawn",
       "authors_short": "McGrath, E. J., Finkelstein, S. L., Barro, G., et al. (incl. Davis, K.)",
       "author_count": 46,
+      "author_position": 15,
       "year": 2026,
       "pubdate": "2026-03-00",
       "reference": "ApJL, 999, L6 (2026)",
@@ -151,13 +177,16 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2026ApJ...999L...6M/abstract",
       "url_arxiv": "https://arxiv.org/abs/2602.22306",
       "url_doi": "https://doi.org/10.3847/2041-8213/ae3da2",
-      "topics": []
+      "topics": [
+        "eelg"
+      ]
     },
     {
       "bibcode": "2026arXiv260223310D",
       "title": "Extreme Emission Line Galaxies in CEERS Are Powered by Star Formation, not AGN",
       "authors_short": "Davis, K., Brooks, M., Trump, J. R., et al.",
       "author_count": 31,
+      "author_position": 1,
       "year": 2026,
       "pubdate": "2026-02-00",
       "reference": "Preprint, 2026",
@@ -167,13 +196,17 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2026arXiv260223310D/abstract",
       "url_arxiv": "https://arxiv.org/abs/2602.23310",
       "url_doi": "https://doi.org/10.48550/arXiv.2602.23310",
-      "topics": []
+      "topics": [
+        "eelg",
+        "lrd"
+      ]
     },
     {
       "bibcode": "2026arXiv260220247P",
       "title": "Little Red Dots: One Photometric Tag Concealing Diverse Spectroscopic Flavors of Massive Star Formation and Black Hole Activity",
       "authors_short": "P\u00e9rez-Gonz\u00e1lez, P. G., Barro, G., Carniani, S., et al. (incl. Davis, K.)",
       "author_count": 65,
+      "author_position": 25,
       "year": 2026,
       "pubdate": "2026-02-00",
       "reference": "Preprint, 2026",
@@ -183,13 +216,16 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2026arXiv260220247P/abstract",
       "url_arxiv": "https://arxiv.org/abs/2602.20247",
       "url_doi": "https://doi.org/10.48550/arXiv.2602.20247",
-      "topics": []
+      "topics": [
+        "lrd"
+      ]
     },
     {
       "bibcode": "2025arXiv251212509H",
       "title": "THRILS -- The High-(Redshift+Ionization) Line Search: Program Description &amp; Redshift Catalog",
       "authors_short": "Hutchison, T. A., Larson, R. L., Arrabal Haro, P., et al. (incl. Davis, K.)",
       "author_count": 49,
+      "author_position": 7,
       "year": 2025,
       "pubdate": "2025-12-00",
       "reference": "Preprint, 2025",
@@ -199,13 +235,17 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2025arXiv251212509H/abstract",
       "url_arxiv": "https://arxiv.org/abs/2512.12509",
       "url_doi": "https://doi.org/10.48550/arXiv.2512.12509",
-      "topics": []
+      "topics": [
+        "eelg",
+        "survey"
+      ]
     },
     {
       "bibcode": "2025ApJ...994..212M",
       "title": "Testing Photometric Techniques for Measuring the Rest-frame UV Spectral Slope against JWST PRISM Spectroscopy",
       "authors_short": "Morales, A. M., Finkelstein, S. L., Arrabal Haro, P., et al. (incl. Davis, K.)",
       "author_count": 24,
+      "author_position": 7,
       "year": 2025,
       "pubdate": "2025-12-00",
       "reference": "ApJ, 994, 212 (2025)",
@@ -215,13 +255,16 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2025ApJ...994..212M/abstract",
       "url_arxiv": "https://arxiv.org/abs/2507.03118",
       "url_doi": "https://doi.org/10.3847/1538-4357/ae145c",
-      "topics": []
+      "topics": [
+        "eelg"
+      ]
     },
     {
       "bibcode": "2025ApJ...994..146C",
       "title": "Optical Strong Line Ratios Cannot Distinguish between Stellar Populations and Accreting Black Holes at High Ionization Parameters and Low Metallicities",
       "authors_short": "Cleri, N. J., Olivier, G. M., Backhaus, B. E., et al. (incl. Davis, K.)",
       "author_count": 27,
+      "author_position": 14,
       "year": 2025,
       "pubdate": "2025-12-00",
       "reference": "ApJ, 994, 146 (2025)",
@@ -231,13 +274,16 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2025ApJ...994..146C/abstract",
       "url_arxiv": "https://arxiv.org/abs/2506.21660",
       "url_doi": "https://doi.org/10.3847/1538-4357/ae0f17",
-      "topics": []
+      "topics": [
+        "eelg"
+      ]
     },
     {
       "bibcode": "2025ApJ...994..125B",
       "title": "Emission-line Diagnostics at z &gt; 4: [O III]\u03bb4364/H\u03b3 versus [Ne III]\u03bb3870/[O II]\u03bb3730",
       "authors_short": "Backhaus, B. E., Cleri, N. J., Trump, J. R., et al. (incl. Davis, K.)",
       "author_count": 21,
+      "author_position": 11,
       "year": 2025,
       "pubdate": "2025-11-00",
       "reference": "ApJ, 994, 125 (2025)",
@@ -247,13 +293,16 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2025ApJ...994..125B/abstract",
       "url_arxiv": "https://arxiv.org/abs/2502.03519",
       "url_doi": "https://doi.org/10.3847/1538-4357/ae1136",
-      "topics": []
+      "topics": [
+        "eelg"
+      ]
     },
     {
       "bibcode": "2025A&A...701A.122M",
       "title": "Little impact of mergers and galaxy morphology on the production and escape of ionizing photons in the early Universe",
       "authors_short": "Mascia, S., Pentericci, L., Llerena, M., et al. (incl. Davis, K.)",
       "author_count": 31,
+      "author_position": 14,
       "year": 2025,
       "pubdate": "2025-09-00",
       "reference": "A&A, 701, A122 (2025)",
@@ -263,13 +312,16 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2025A%26A...701A.122M/abstract",
       "url_arxiv": "https://arxiv.org/abs/2501.08268",
       "url_doi": "https://doi.org/10.1051/0004-6361/202553760",
-      "topics": []
+      "topics": [
+        "eelg"
+      ]
     },
     {
       "bibcode": "2025ApJ...989L...7T",
       "title": "CAPERS-LRD-z9: A Gas-enshrouded Little Red Dot Hosting a Broad-line Active Galactic Nucleus at z = 9.288",
       "authors_short": "Taylor, A. J., Kokorev, V., Kocevski, D. D., et al. (incl. Davis, K.)",
       "author_count": 52,
+      "author_position": 26,
       "year": 2025,
       "pubdate": "2025-08-00",
       "reference": "ApJL, 989, L7 (2025)",
@@ -279,13 +331,16 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2025ApJ...989L...7T/abstract",
       "url_arxiv": "https://arxiv.org/abs/2505.04609",
       "url_doi": "https://doi.org/10.3847/2041-8213/ade789",
-      "topics": []
+      "topics": [
+        "lrd"
+      ]
     },
     {
       "bibcode": "2025ApJ...988L..10K",
       "title": "CAPERS Observations of Two UV-bright Galaxies at z &gt; 10. More Evidence for Bursting Star Formation in the Early Universe",
       "authors_short": "Kokorev, V., Ch\u00e1vez Ortiz, \u00d3. A., Taylor, A. J., et al. (incl. Davis, K.)",
       "author_count": 41,
+      "author_position": 22,
       "year": 2025,
       "pubdate": "2025-07-00",
       "reference": "ApJL, 988, L10 (2025)",
@@ -295,13 +350,16 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2025ApJ...988L..10K/abstract",
       "url_arxiv": "https://arxiv.org/abs/2504.12504",
       "url_doi": "https://doi.org/10.3847/2041-8213/ade8f5",
-      "topics": []
+      "topics": [
+        "eelg"
+      ]
     },
     {
       "bibcode": "2025ApJ...986..177B",
       "title": "Here There Be (Dusty) Monsters: High-redshift Active Galactic Nuclei Are Dustier than Their Hosts",
       "authors_short": "Brooks, M., Simons, R. C., Trump, J. R., et al. (incl. Davis, K.)",
       "author_count": 18,
+      "author_position": 7,
       "year": 2025,
       "pubdate": "2025-06-00",
       "reference": "ApJ, 986, 177 (2025)",
@@ -311,13 +369,16 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2025ApJ...986..177B/abstract",
       "url_arxiv": "https://arxiv.org/abs/2410.07340",
       "url_doi": "https://doi.org/10.3847/1538-4357/addac4",
-      "topics": []
+      "topics": [
+        "lrd"
+      ]
     },
     {
       "bibcode": "2025ApJ...986..165T",
       "title": "Broad-line AGNs at 3.5 &lt; z &lt; 6: The Black Hole Mass Function and a Connection with Little Red Dots",
       "authors_short": "Taylor, A. J., Finkelstein, S. L., Kocevski, D. D., et al. (incl. Davis, K.)",
       "author_count": 51,
+      "author_position": 18,
       "year": 2025,
       "pubdate": "2025-06-00",
       "reference": "ApJ, 986, 165 (2025)",
@@ -327,13 +388,16 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2025ApJ...986..165T/abstract",
       "url_arxiv": "https://arxiv.org/abs/2409.06772",
       "url_doi": "https://doi.org/10.3847/1538-4357/add15b",
-      "topics": []
+      "topics": [
+        "lrd"
+      ]
     },
     {
       "bibcode": "2025ApJ...986..126K",
       "title": "The Rise of Faint, Red Active Galactic Nuclei at z &gt; 4: A Sample of Little Red Dots in the JWST Extragalactic Legacy Fields",
       "authors_short": "Kocevski, D. D., Finkelstein, S. L., Barro, G., et al. (incl. Davis, K.)",
       "author_count": 57,
+      "author_position": 27,
       "year": 2025,
       "pubdate": "2025-06-00",
       "reference": "ApJ, 986, 126 (2025)",
@@ -343,13 +407,16 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2025ApJ...986..126K/abstract",
       "url_arxiv": "https://arxiv.org/abs/2404.03576",
       "url_doi": "https://doi.org/10.3847/1538-4357/adbc7d",
-      "topics": []
+      "topics": [
+        "lrd"
+      ]
     },
     {
       "bibcode": "2025ApJ...983L...4F",
       "title": "The Cosmic Evolution Early Release Science Survey (CEERS)",
       "authors_short": "Finkelstein, S. L., Bagley, M. B., Arrabal Haro, P., et al. (incl. Davis, K.)",
       "author_count": 105,
+      "author_position": 46,
       "year": 2025,
       "pubdate": "2025-04-00",
       "reference": "ApJL, 983, L4 (2025)",
@@ -359,13 +426,17 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2025ApJ...983L...4F/abstract",
       "url_arxiv": "https://arxiv.org/abs/2501.04085",
       "url_doi": "https://doi.org/10.3847/2041-8213/adbbd3",
-      "topics": []
+      "topics": [
+        "eelg",
+        "survey"
+      ]
     },
     {
       "bibcode": "2024A&A...691A.240M",
       "title": "ASTRODEEP-JWST: NIRCam-HST multi-band photometry and redshifts for half a million sources in six extragalactic deep fields",
       "authors_short": "Merlin, E., Santini, P., Paris, D., et al. (incl. Davis, K.)",
       "author_count": 55,
+      "author_position": 14,
       "year": 2024,
       "pubdate": "2024-11-00",
       "reference": "A&A, 691, A240 (2024)",
@@ -375,13 +446,16 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2024A%26A...691A.240M/abstract",
       "url_arxiv": "https://arxiv.org/abs/2409.00169",
       "url_doi": "https://doi.org/10.1051/0004-6361/202451409",
-      "topics": []
+      "topics": [
+        "survey"
+      ]
     },
     {
       "bibcode": "2024A&A...691A..59L",
       "title": "Physical properties of extreme emission-line galaxies at z \u223c 4\u25009 from the JWST CEERS survey",
       "authors_short": "Llerena, M., Amor\u00edn, R., Pentericci, L., et al. (incl. Davis, K.)",
       "author_count": 25,
+      "author_position": 9,
       "year": 2024,
       "pubdate": "2024-11-00",
       "reference": "A&A, 691, A59 (2024)",
@@ -391,13 +465,16 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2024A%26A...691A..59L/abstract",
       "url_arxiv": "https://arxiv.org/abs/2403.05362",
       "url_doi": "https://doi.org/10.1051/0004-6361/202449904",
-      "topics": []
+      "topics": [
+        "eelg"
+      ]
     },
     {
       "bibcode": "2024ApJ...974...42D",
       "title": "A Census from JWST of Extreme Emission-line Galaxies Spanning the Epoch of Reionization in CEERS",
       "authors_short": "Davis, K., Trump, J. R., Simons, R. C., et al.",
       "author_count": 33,
+      "author_position": 1,
       "year": 2024,
       "pubdate": "2024-10-00",
       "reference": "ApJ, 974, 42 (2024)",
@@ -407,13 +484,16 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2024ApJ...974...42D/abstract",
       "url_arxiv": "https://arxiv.org/abs/2312.07799",
       "url_doi": "https://doi.org/10.3847/1538-4357/ad6865",
-      "topics": []
+      "topics": [
+        "eelg"
+      ]
     },
     {
       "bibcode": "2024A&A...688A.106N",
       "title": "Peering into cosmic reionization: Ly\u03b1 visibility evolution from galaxies at z = 4.5-8.5 with JWST",
       "authors_short": "Napolitano, L., Pentericci, L., Santini, P., et al. (incl. Davis, K.)",
       "author_count": 33,
+      "author_position": 15,
       "year": 2024,
       "pubdate": "2024-08-00",
       "reference": "A&A, 688, A106 (2024)",
@@ -423,13 +503,16 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2024A%26A...688A.106N/abstract",
       "url_arxiv": "https://arxiv.org/abs/2402.11220",
       "url_doi": "https://doi.org/10.1051/0004-6361/202449644",
-      "topics": []
+      "topics": [
+        "eelg"
+      ]
     },
     {
       "bibcode": "2024ApJ...969L...2F",
       "title": "The Complete CEERS Early Universe Galaxy Sample: A Surprisingly Slow Evolution of the Space Density of Bright Galaxies at z \u223c 8.5\u250014.5",
       "authors_short": "Finkelstein, S. L., Leung, G. C. K., Bagley, M. B., et al. (incl. Davis, K.)",
       "author_count": 55,
+      "author_position": 28,
       "year": 2024,
       "pubdate": "2024-07-00",
       "reference": "ApJL, 969, L2 (2024)",
@@ -439,13 +522,16 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2024ApJ...969L...2F/abstract",
       "url_arxiv": "https://arxiv.org/abs/2311.04279",
       "url_doi": "https://doi.org/10.3847/2041-8213/ad4495",
-      "topics": []
+      "topics": [
+        "eelg"
+      ]
     },
     {
       "bibcode": "2024ApJ...969...90P",
       "title": "The Next Generation Deep Extragalactic Exploratory Public Near-infrared Slitless Survey Epoch 1 (NGDEEP-NISS1): Extragalactic Star-formation and Active Galactic Nuclei at 0.5 &lt; z &lt; 3.6",
       "authors_short": "Pirzkal, N., Rothberg, B., Papovich, C., et al. (incl. Davis, K.)",
       "author_count": 51,
+      "author_position": 32,
       "year": 2024,
       "pubdate": "2024-07-00",
       "reference": "ApJ, 969, 90 (2024)",
@@ -462,6 +548,7 @@
       "title": "The Next Generation Deep Extragalactic Exploratory Public (NGDEEP) Survey",
       "authors_short": "Bagley, M. B., Pirzkal, N., Finkelstein, S. L., et al. (incl. Davis, K.)",
       "author_count": 48,
+      "author_position": 22,
       "year": 2024,
       "pubdate": "2024-04-00",
       "reference": "ApJL, 965, L6 (2024)",
@@ -478,6 +565,7 @@
       "title": "Extremely Red Galaxies at z = 5\u25009 with MIRI and NIRSpec: Dusty Galaxies or Obscured Active Galactic Nuclei?",
       "authors_short": "Barro, G., P\u00e9rez-Gonz\u00e1lez, P. G., Kocevski, D. D., et al. (incl. Davis, K.)",
       "author_count": 34,
+      "author_position": 14,
       "year": 2024,
       "pubdate": "2024-03-00",
       "reference": "ApJ, 963, 128 (2024)",
@@ -487,13 +575,16 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2024ApJ...963..128B/abstract",
       "url_arxiv": "https://arxiv.org/abs/2305.14418",
       "url_doi": "https://doi.org/10.3847/1538-4357/ad167e",
-      "topics": []
+      "topics": [
+        "lrd"
+      ]
     },
     {
       "bibcode": "2024ApJ...962..195B",
       "title": "CEERS Key Paper. VIII. Emission-line Ratios from NIRSpec and NIRCam Wide-Field Slitless Spectroscopy at z &gt; 2",
       "authors_short": "Backhaus, B. E., Trump, J. R., Pirzkal, N., et al. (incl. Davis, K.)",
       "author_count": 40,
+      "author_position": 40,
       "year": 2024,
       "pubdate": "2024-02-00",
       "reference": "ApJ, 962, 195 (2024)",
@@ -503,13 +594,16 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2024ApJ...962..195B/abstract",
       "url_arxiv": "https://arxiv.org/abs/2307.09503",
       "url_doi": "https://doi.org/10.3847/1538-4357/ad1520",
-      "topics": []
+      "topics": [
+        "eelg"
+      ]
     },
     {
       "bibcode": "2023ApJ...945L..10G",
       "title": "First Look at z &gt; 1 Bars in the Rest-frame Near-infrared with JWST Early CEERS Imaging",
       "authors_short": "Guo, Y., Jogee, S., Finkelstein, S. L., et al. (incl. Davis, K.)",
       "author_count": 48,
+      "author_position": 36,
       "year": 2023,
       "pubdate": "2023-03-00",
       "reference": "ApJL, 945, L10 (2023)",
