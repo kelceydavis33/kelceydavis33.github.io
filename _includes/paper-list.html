@@ -1,0 +1,5 @@
+<ul class="paper-list">
+  {% for paper in include.papers %}
+  {% include paper-entry.html paper=paper %}
+  {% endfor %}
+</ul>
