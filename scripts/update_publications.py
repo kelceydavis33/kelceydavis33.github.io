@@ -30,6 +30,9 @@ import yaml
 # --- things you might want to change ---------------------------------------
 
 ORCID = "0000-0001-8047-8351"
+
+# Where the hand-made topic assignments live.
+ASSIGNMENTS_PATH = "_data/paper_topics.yml"
 SURNAME = "Davis"
 FIRST_INITIAL = "K"
 
@@ -270,32 +273,105 @@ def find_arxiv_url(doc):
     return ""
 
 
-def assign_topics(paper, topics):
-    """Decide which research pages this paper belongs on."""
-    haystack = (paper["title"] + " " + paper.get("abstract_text", "")
-                + " " + paper.get("keyword_text", "")).lower()
+def load_assignments():
+    """Read the topic assignments you have made by hand."""
+    if not os.path.exists(ASSIGNMENTS_PATH):
+        return {}
 
-    found = []
-    for key in topics:
-        rules = topics[key]
+    with open(ASSIGNMENTS_PATH) as handle:
+        existing = yaml.safe_load(handle)
 
-        if paper["bibcode"] in (rules.get("never") or []):
-            continue
-
-        if paper["bibcode"] in (rules.get("always") or []):
-            found.append(key)
-            continue
-
-        for keyword in rules.get("keywords", []):
-            pattern = r"\b" + re.escape(keyword.lower()) + r"\b"
-            if re.search(pattern, haystack):
-                found.append(key)
-                break
-
-    return found
+    if existing is None:
+        return {}
+    return existing
 
 
-def tidy(doc, topics):
+def assignment_block(bibcode, title, topics):
+    """One paper's entry, written so it is easy to edit by hand."""
+    return "\n{}:\n  title: {}\n  topics: [{}]\n".format(
+        json.dumps(bibcode), json.dumps(title), ", ".join(topics))
+
+
+def save_assignments(papers, existing, topic_names):
+    """Rewrite the assignment file, keeping every choice already made and
+    adding any new paper with an empty topic list."""
+    header = [
+        "# Which research pages each paper appears on.",
+        "#",
+        "# Edit the topics list under any paper. A paper can belong to more",
+        "# than one area, or to none, in which case it only shows up on the",
+        "# publications page.",
+        "#",
+        "# Available areas: " + ", ".join(topic_names),
+        "#",
+        "# New papers are added here automatically with an empty list each",
+        "# time the publications are refreshed from ADS. Your edits are never",
+        "# overwritten, so it is safe to re-run.",
+        "#",
+        "# The title under each bibcode is only here so the file can be read.",
+        "# Changing it has no effect on the site.",
+    ]
+
+    blocks = []
+    seen = []
+    unassigned = 0
+
+    for paper in papers:
+        bibcode = paper["bibcode"]
+        seen.append(bibcode)
+
+        entry = existing.get(bibcode, {})
+        topics = entry.get("topics")
+        if topics is None:
+            topics = []
+        if len(topics) == 0:
+            unassigned = unassigned + 1
+
+        blocks.append(assignment_block(bibcode, paper["title"], topics))
+
+    # Anything ADS no longer returns is kept rather than silently dropped,
+    # so a bad query never destroys work already done.
+    leftovers = []
+    for bibcode in existing:
+        if bibcode not in seen:
+            leftovers.append(bibcode)
+
+    if len(leftovers) > 0:
+        blocks.append("\n# Not in the latest ADS results. Kept in case it comes"
+                      "\n# back; delete by hand if it is gone for good.\n")
+        for bibcode in leftovers:
+            entry = existing[bibcode]
+            topics = entry.get("topics")
+            if topics is None:
+                topics = []
+            blocks.append(assignment_block(bibcode, entry.get("title", ""), topics))
+
+    with open(ASSIGNMENTS_PATH, "w") as handle:
+        handle.write("\n".join(header) + "\n")
+        for block in blocks:
+            handle.write(block)
+
+    return unassigned
+
+
+def topics_for(bibcode, assignments, topic_names):
+    """The areas this paper has been assigned to, ignoring unknown names."""
+    entry = assignments.get(bibcode, {})
+    topics = entry.get("topics")
+    if topics is None:
+        return []
+
+    kept = []
+    for topic in topics:
+        if topic in topic_names:
+            kept.append(topic)
+        else:
+            print("  unknown area '{}' on {}".format(topic, bibcode))
+
+    return kept
+
+
+def tidy(doc):
     """Turn one raw ADS record into the shape the site templates expect."""
     titles = doc.get("title", [""])
     title = titles[0]
@@ -335,9 +411,6 @@ def tidy(doc, topics):
     if isinstance(abstracts, list):
         abstracts = " ".join(abstracts)
     paper["abstract_text"] = abstracts
-    paper["keyword_text"] = " ".join(doc.get("keyword", []))
-
-    paper["topics"] = assign_topics(paper, topics)
     return paper
 
 
@@ -479,6 +552,12 @@ def main():
     with open("_data/topics.yml") as handle:
         topics = yaml.safe_load(handle)
 
+    topic_names = []
+    for key in topics:
+        topic_names.append(key)
+
+    assignments = load_assignments()
+
     if use_arxiv:
         docs = fetch_from_arxiv()
     else:
@@ -488,7 +567,7 @@ def main():
     for doc in docs:
         if doc.get("doctype", "") in SKIP_DOCTYPES:
             continue
-        papers.append(tidy(doc, topics))
+        papers.append(tidy(doc))
 
     papers = drop_duplicates(papers)
     papers.sort(key=lambda paper: (paper["pubdate"], paper["bibcode"]), reverse=True)
@@ -513,8 +592,8 @@ def main():
     # The abstract text was only needed for topic matching; drop it so the
     # committed data file stays small.
     for paper in papers:
+        paper["topics"] = topics_for(paper["bibcode"], assignments, topic_names)
         paper.pop("abstract_text", None)
-        paper.pop("keyword_text", None)
 
     with open("_data/publications.json", "w") as handle:
         json.dump({"stats": stats, "papers": papers}, handle, indent=2)
@@ -525,12 +604,18 @@ def main():
         json.dump(cloud, handle, indent=2)
         handle.write("\n")
 
-    for key in topics:
+    unassigned = save_assignments(papers, assignments, topic_names)
+
+    for key in topic_names:
         tagged = 0
         for paper in papers:
             if key in paper["topics"]:
                 tagged = tagged + 1
         print("{:8s} {} papers".format(key, tagged))
+
+    if unassigned > 0:
+        print("\n{} paper(s) are not assigned to any area yet.".format(unassigned))
+        print("Edit the topics list for each one in {}".format(ASSIGNMENTS_PATH))
 
     print("Wrote {} papers, h={}, {} citations".format(
         stats["n_papers"], stats["h_index"], stats["citations_total"]))
