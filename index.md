@@ -3,7 +3,7 @@ layout: page
 title: Kelcey Davis
 permalink: /
 lede: >-
-  I am a PhD candidate in physics at the University of Connecticut and Los Alamos
+  I am an NSF GRFP fellow and PhD candidate in physics at the University of Connecticut and Los Alamos
   National Laboratory. I study the time period when the earliest supermassive black holes and the galaxies that host them first grew, Cosmic Dawn.
 ---
 <div class="hero">
