@@ -16,26 +16,55 @@ layout: default
   {{ content }}
 </div>
 
-{% assign tagged = site.data.publications.papers | where_exp: "paper", "paper.topics contains page.topic_id" %}
-{% assign led = tagged | where: "role", "first" %}
-{% assign supporting = tagged | where: "role", "co" %}
+{% comment %}
+  Which papers land here is read straight from _data/paper_topics.yml, so
+  editing that file takes effect on the next build. There is no need to
+  re-run the ADS refresh after retagging a paper.
+{% endcomment %}
+
+{% assign led_count = 0 %}
+{% assign co_count = 0 %}
+{% for paper in site.data.publications.papers %}
+  {% assign entry = site.data.paper_topics[paper.bibcode] %}
+  {% if entry.topics contains page.topic_id %}
+    {% if paper.role == "first" %}
+      {% assign led_count = led_count | plus: 1 %}
+    {% else %}
+      {% assign co_count = co_count | plus: 1 %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
 
 <section class="papers">
   <h2>Papers I led</h2>
-  {% if led.size > 0 %}
-    {% include paper-list.html papers=led %}
+  {% if led_count > 0 %}
+  <ul class="paper-list">
+    {% for paper in site.data.publications.papers %}
+      {% assign entry = site.data.paper_topics[paper.bibcode] %}
+      {% if entry.topics contains page.topic_id and paper.role == "first" %}
+        {% include paper-entry.html paper=paper %}
+      {% endif %}
+    {% endfor %}
+  </ul>
   {% else %}
-    <p class="empty">No first-author papers are tagged with this topic yet. Add a bibcode under
-    <code>{{ page.topic_id }}: always:</code> in <code>_data/topics.yml</code> to place one here.</p>
+  <p class="empty">No first-author papers are assigned to this area yet. Add
+  <code>{{ page.topic_id }}</code> to a paper's topics list in
+  <code>_data/paper_topics.yml</code>.</p>
   {% endif %}
 </section>
 
 <section class="papers">
   <h2>Papers I contributed to</h2>
-  {% if supporting.size > 0 %}
-    {% include paper-list.html papers=supporting %}
+  {% if co_count > 0 %}
+  <ul class="paper-list">
+    {% for paper in site.data.publications.papers %}
+      {% assign entry = site.data.paper_topics[paper.bibcode] %}
+      {% if entry.topics contains page.topic_id and paper.role != "first" %}
+        {% include paper-entry.html paper=paper %}
+      {% endif %}
+    {% endfor %}
+  </ul>
   {% else %}
-    <p class="empty">No co-authored papers are tagged with this topic yet. Adjust the keywords under
-    <code>{{ page.topic_id }}:</code> in <code>_data/topics.yml</code> to catch more of them.</p>
+  <p class="empty">No co-authored papers are assigned to this area yet.</p>
   {% endif %}
 </section>
