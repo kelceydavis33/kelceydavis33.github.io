@@ -221,6 +221,30 @@ def shorten_name(name):
     return surname.strip() + ", " + initials.strip()
 
 
+def is_me(name):
+    """Whether one ADS author string refers to you."""
+    if "," not in name:
+        return False
+
+    surname, given = name.split(",", 1)
+    if surname.strip().lower() != SURNAME.lower():
+        return False
+
+    given = given.strip()
+    if given == "":
+        return False
+
+    return given[:1].upper() == FIRST_INITIAL.upper()
+
+
+def author_position(authors):
+    """Your place in the author list, counting from 1. Zero if not found."""
+    for i in range(len(authors)):
+        if is_me(authors[i]):
+            return i + 1
+    return 0
+
+
 def format_authors(authors, is_first_author):
     """A short author string for the paper lists."""
     if len(authors) == 0:
@@ -379,17 +403,16 @@ def tidy(doc):
     properties = doc.get("property", [])
     is_refereed = "REFEREED" in properties
 
-    first_author = doc.get("first_author", "")
-    is_first_author = first_author.lower().startswith(SURNAME.lower() + ",")
-    if is_first_author:
-        given = first_author.split(",", 1)[1].strip()
-        is_first_author = given[:1].upper() == FIRST_INITIAL.upper()
+    authors = doc.get("author", [])
+    position = author_position(authors)
+    is_first_author = position == 1
 
     paper = {
         "bibcode": doc["bibcode"],
         "title": title,
-        "authors_short": format_authors(doc.get("author", []), is_first_author),
-        "author_count": len(doc.get("author", [])),
+        "authors_short": format_authors(authors, is_first_author),
+        "author_count": len(authors),
+        "author_position": position,
         "year": int(doc.get("year", 0)),
         "pubdate": doc.get("pubdate", ""),
         "reference": format_reference(doc, is_refereed),
