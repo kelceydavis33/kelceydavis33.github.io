@@ -23,9 +23,7 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2026ApJ..1006...84J/abstract",
       "url_arxiv": "https://arxiv.org/abs/2606.30734",
       "url_doi": "https://doi.org/10.3847/1538-4357/ae83a6",
-      "topics": [
-        "lrd"
-      ]
+      "topics": []
     },
     {
       "bibcode": "2026arXiv260623683R",
@@ -41,9 +39,7 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2026arXiv260623683R/abstract",
       "url_arxiv": "https://arxiv.org/abs/2606.23683",
       "url_doi": "https://doi.org/10.48550/arXiv.2606.23683",
-      "topics": [
-        "lrd"
-      ]
+      "topics": []
     },
     {
       "bibcode": "2026arXiv260606575G",
@@ -59,9 +55,7 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2026arXiv260606575G/abstract",
       "url_arxiv": "https://arxiv.org/abs/2606.06575",
       "url_doi": "https://doi.org/10.48550/arXiv.2606.06575",
-      "topics": [
-        "lrd"
-      ]
+      "topics": []
     },
     {
       "bibcode": "2026arXiv260600258D",
@@ -77,10 +71,7 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2026arXiv260600258D/abstract",
       "url_arxiv": "https://arxiv.org/abs/2606.00258",
       "url_doi": "https://doi.org/10.48550/arXiv.2606.00258",
-      "topics": [
-        "lrd",
-        "survey"
-      ]
+      "topics": []
     },
     {
       "bibcode": "2026ApJ..1002..129B",
@@ -96,9 +87,7 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2026ApJ..1002..129B/abstract",
       "url_arxiv": "https://arxiv.org/abs/2511.19609",
       "url_doi": "https://doi.org/10.3847/1538-4357/ae5652",
-      "topics": [
-        "lrd"
-      ]
+      "topics": []
     },
     {
       "bibcode": "2026A&A...708A.152L",
@@ -114,9 +103,7 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2026A%26A...708A.152L/abstract",
       "url_arxiv": "https://arxiv.org/abs/2510.25647",
       "url_doi": "https://doi.org/10.1051/0004-6361/202557897",
-      "topics": [
-        "eelg"
-      ]
+      "topics": []
     },
     {
       "bibcode": "2026PhPl...33c2701W",
@@ -180,11 +167,7 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2026arXiv260223310D/abstract",
       "url_arxiv": "https://arxiv.org/abs/2602.23310",
       "url_doi": "https://doi.org/10.48550/arXiv.2602.23310",
-      "topics": [
-        "lrd",
-        "eelg",
-        "survey"
-      ]
+      "topics": []
     },
     {
       "bibcode": "2026arXiv260220247P",
@@ -200,9 +183,7 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2026arXiv260220247P/abstract",
       "url_arxiv": "https://arxiv.org/abs/2602.20247",
       "url_doi": "https://doi.org/10.48550/arXiv.2602.20247",
-      "topics": [
-        "lrd"
-      ]
+      "topics": []
     },
     {
       "bibcode": "2025arXiv251212509H",
@@ -250,9 +231,7 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2025ApJ...994..146C/abstract",
       "url_arxiv": "https://arxiv.org/abs/2506.21660",
       "url_doi": "https://doi.org/10.3847/1538-4357/ae0f17",
-      "topics": [
-        "lrd"
-      ]
+      "topics": []
     },
     {
       "bibcode": "2025ApJ...994..125B",
@@ -268,9 +247,7 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2025ApJ...994..125B/abstract",
       "url_arxiv": "https://arxiv.org/abs/2502.03519",
       "url_doi": "https://doi.org/10.3847/1538-4357/ae1136",
-      "topics": [
-        "lrd"
-      ]
+      "topics": []
     },
     {
       "bibcode": "2025A&A...701A.122M",
@@ -302,9 +279,7 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2025ApJ...989L...7T/abstract",
       "url_arxiv": "https://arxiv.org/abs/2505.04609",
       "url_doi": "https://doi.org/10.3847/2041-8213/ade789",
-      "topics": [
-        "lrd"
-      ]
+      "topics": []
     },
     {
       "bibcode": "2025ApJ...988L..10K",
@@ -320,9 +295,7 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2025ApJ...988L..10K/abstract",
       "url_arxiv": "https://arxiv.org/abs/2504.12504",
       "url_doi": "https://doi.org/10.3847/2041-8213/ade8f5",
-      "topics": [
-        "eelg"
-      ]
+      "topics": []
     },
     {
       "bibcode": "2025ApJ...986..177B",
@@ -338,9 +311,7 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2025ApJ...986..177B/abstract",
       "url_arxiv": "https://arxiv.org/abs/2410.07340",
       "url_doi": "https://doi.org/10.3847/1538-4357/addac4",
-      "topics": [
-        "lrd"
-      ]
+      "topics": []
     },
     {
       "bibcode": "2025ApJ...986..165T",
@@ -356,9 +327,7 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2025ApJ...986..165T/abstract",
       "url_arxiv": "https://arxiv.org/abs/2409.06772",
       "url_doi": "https://doi.org/10.3847/1538-4357/add15b",
-      "topics": [
-        "lrd"
-      ]
+      "topics": []
     },
     {
       "bibcode": "2025ApJ...986..126K",
@@ -374,9 +343,7 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2025ApJ...986..126K/abstract",
       "url_arxiv": "https://arxiv.org/abs/2404.03576",
       "url_doi": "https://doi.org/10.3847/1538-4357/adbc7d",
-      "topics": [
-        "lrd"
-      ]
+      "topics": []
     },
     {
       "bibcode": "2025ApJ...983L...4F",
@@ -408,9 +375,7 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2024A%26A...691A.240M/abstract",
       "url_arxiv": "https://arxiv.org/abs/2409.00169",
       "url_doi": "https://doi.org/10.1051/0004-6361/202451409",
-      "topics": [
-        "survey"
-      ]
+      "topics": []
     },
     {
       "bibcode": "2024A&A...691A..59L",
@@ -426,9 +391,7 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2024A%26A...691A..59L/abstract",
       "url_arxiv": "https://arxiv.org/abs/2403.05362",
       "url_doi": "https://doi.org/10.1051/0004-6361/202449904",
-      "topics": [
-        "eelg"
-      ]
+      "topics": []
     },
     {
       "bibcode": "2024ApJ...974...42D",
@@ -444,9 +407,7 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2024ApJ...974...42D/abstract",
       "url_arxiv": "https://arxiv.org/abs/2312.07799",
       "url_doi": "https://doi.org/10.3847/1538-4357/ad6865",
-      "topics": [
-        "lrd"
-      ]
+      "topics": []
     },
     {
       "bibcode": "2024A&A...688A.106N",
@@ -462,10 +423,7 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2024A%26A...688A.106N/abstract",
       "url_arxiv": "https://arxiv.org/abs/2402.11220",
       "url_doi": "https://doi.org/10.1051/0004-6361/202449644",
-      "topics": [
-        "lrd",
-        "survey"
-      ]
+      "topics": []
     },
     {
       "bibcode": "2024ApJ...969L...2F",
@@ -497,9 +455,7 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2024ApJ...969...90P/abstract",
       "url_arxiv": "https://arxiv.org/abs/2312.09972",
       "url_doi": "https://doi.org/10.3847/1538-4357/ad429c",
-      "topics": [
-        "lrd"
-      ]
+      "topics": []
     },
     {
       "bibcode": "2024ApJ...965L...6B",
@@ -531,9 +487,7 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2024ApJ...963..128B/abstract",
       "url_arxiv": "https://arxiv.org/abs/2305.14418",
       "url_doi": "https://doi.org/10.3847/1538-4357/ad167e",
-      "topics": [
-        "lrd"
-      ]
+      "topics": []
     },
     {
       "bibcode": "2024ApJ...962..195B",
