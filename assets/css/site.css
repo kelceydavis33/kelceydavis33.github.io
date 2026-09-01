@@ -294,8 +294,7 @@ code {
 .topic-figure { margin: 0 0 1.5rem; max-width: 28rem; }
 .topic-figure img {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  height: auto;
   background: var(--paper-sunk);
   border-bottom: 3px solid var(--rule);
 }
