@@ -4,8 +4,7 @@ title: Research
 permalink: /research/
 ---
 
-I am an observational astrophysicist interested in the environments of the earliest supermassive black holes and the galaxies that host them. In my doctoral thesis, I have demonstrated how strong line emission can be recovered from the broadband photometry in many of these early systems. This photometric galaxy catalog has provided target selections for several spectroscopic surveys (OCEANS, THRILS, and CEERS). The work has also inspired the award of 60 hours of additional photometric observations in the CEERS legacy footprint through SPAM, a recently executed program which I PI'ed. My science publications on strong emission line sources at cosmic %noon to 
-% dawn concern quantifying the presence of accreting supermassive black holes, studying the nature of the emission line excitation mechanisms, and tracing gas kinematics in JWST's ``Little Red Dots''. In addition to research activities I maintain active commitments to science outreach and undergraduate research mentorship.
+My Doctoral research is broken up into three sub-areas, which you can read a bit about at each of the following pages.
 
 <div class="topic-grid">
   {% for topic in site.data.topics %}
