@@ -53,6 +53,24 @@ SKIP_DOCTYPES = [
 # How many terms to show in the word cloud.
 CLOUD_SIZE = 45
 
+# Terms kept out of the word cloud. ADS builds it from abstract text that
+# still holds MathML and LaTeX, so tags like mml and mrow come through as if
+# they were words. The second group is ordinary academic filler that says
+# nothing about the research. Add anything else you would rather not see.
+CLOUD_SKIP = [
+    "mml", "mrow", "msub", "msup", "mfrac", "msqrt", "mspace", "mtext",
+    "mstyle", "munder", "mover", "math", "mathml", "xmlns", "phantom",
+    "sub", "sup", "sim", "approx", "times", "frac", "textrm", "rm",
+    "amp", "nbsp", "lt", "gt", "quad", "left", "right", "begin", "end",
+
+    "present", "presented", "presents", "data", "consistent", "results",
+    "result", "using", "used", "use", "find", "finds", "found", "show",
+    "shows", "shown", "suggest", "suggests", "indicate", "indicates",
+    "based", "provide", "provides", "however", "within", "respectively",
+    "approximately", "new", "well", "also", "may", "can", "including",
+    "compared", "similar", "likely", "possible", "study", "studies",
+]
+
 # --- ADS endpoints ---------------------------------------------------------
 
 SEARCH_URL = "https://api.adsabs.harvard.edu/v1/search/query"
@@ -156,9 +174,18 @@ def wordcloud_from_text(papers):
 
 def build_wordcloud(terms):
     """Turn raw term frequencies into the list the site renders."""
+    skip = set()
+    for word in CLOUD_SKIP:
+        skip.add(word.lower())
+
     ranked = []
+    dropped = []
     for word in terms:
         if len(word) < 3 or word.isdigit():
+            continue
+
+        if word.lower() in skip:
+            dropped.append(word)
             continue
 
         entry = terms[word]
@@ -198,6 +225,10 @@ def build_wordcloud(terms):
             "weight": weight,
             "url": url,
         })
+
+    if len(dropped) > 0:
+        dropped.sort()
+        print("Word cloud: dropped {}".format(", ".join(dropped)))
 
     # Alphabetical order reads better than descending frequency in a cloud.
     words.sort(key=lambda item: item["text"])
@@ -259,9 +290,13 @@ def format_authors(authors, is_first_author):
 
     line = ", ".join(shown) + ", et al."
 
-    me = SURNAME + ", " + FIRST_INITIAL + "."
-    if not is_first_author and me not in shown:
-        line = line + " (incl. {})".format(me)
+    me_is_shown = False
+    for name in authors[:3]:
+        if is_me(name):
+            me_is_shown = True
+
+    if not is_first_author and not me_is_shown:
+        line = line + " (incl. {}, {}.)".format(SURNAME, FIRST_INITIAL)
 
     return line
 
