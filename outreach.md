@@ -10,6 +10,25 @@ Summer 2025 – present
 {% include gallery.html photos=site.data.outreach_photos.stemarts %}
 I worked with the STEMArts team in Taos, New Mexico to build a workshop for young students interested in art and science. I sonified data from the JWST CAOERS NIRSpec prism survey to create audio of the emission lines and continuum for extreme emission line galaxies. Additionally, I translated rest-frame wavelengths into RGB values giving "colors" to each emission line. Students attended weekly meetings led by STEMArts coordinators, composers, visual artists, and myself where they learned how to turn emission line audio and RGB colors into performing art pieces with a techinque called Live Coding. This emerging art form involves editing code live in front of an audience to change both the colorful visuals and the music audio playing in real time. Students worked in pairs, one doing an audio performance while the other performed a visual inspired by the rest-frame colors. A professional composer, Alexandra Cárdenas, and a professional visual artist, MAGENTA, worked together to create a capstone performance. All parties performed at the Taos Film Festival and the Los Alamos Science Fair. At both locations, I gave public-level science talks to introduce the data. I continue to give talks at workshops periodically as I am needed. STEMArts continues to expand this and other forms of artistic scientific expression with their students.
 
+<figure class="sonification">
+  <img src="{{ '/assets/img/taos-spectrum.png' | relative_url }}"
+       alt="The spectrum of CEERS2782/CAPERS 11311, with rest-frame colors (instead of a displayed wavelength range). Blue and red shaded regions correspond to rest-UV and rest-IR respectively. ">
+  <figcaption>The spectrum of CEERS2782/CAPERS 11311, with rest-frame colors (instead of a displayed wavelength range). Blue and red shaded regions correspond to rest-UV and rest-IR respectively.</figcaption>
+
+  <div class="sonification-tracks">
+    <div class="track">
+      <span class="track-label">Hydrogen alpha emission line sonified. Higher sound frequency corresponds to more flux, moving from left to right across the wavelengths spanning the emission line. </span>
+      <audio controls preload="none" src="{{ '/assets/audio/capers-11311-halpha.mp3' | relative_url }}"></audio>
+    </div>
+    <div class="track">
+      <span class="track-label">Hydrogen beta and [O III] emission line complex sonified. Higher sound frequency corresponds to more flux, moving from left to right across the wavelengths spanning the emission line.</span>
+      <audio controls preload="none" src="{{ '/assets/audio/capers-11311-hbeta-oiii.mp3' | relative_url }}"></audio>
+    </div>
+  </div>
+</figure>
+
+
+
 {% include videos.html videos=site.data.outreach_videos.stemarts %}
 
 
