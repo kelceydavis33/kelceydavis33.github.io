@@ -603,3 +603,33 @@ code {
   .hero img { aspect-ratio: 16 / 9; }
   .page-strip { height: 3.5rem; }
 }
+
+/* --------------------------------------------------------------------------
+   Sonified spectra on the outreach page
+   -------------------------------------------------------------------------- */
+
+.sonification { margin: 2.25rem 0 2.5rem; max-width: var(--measure); }
+
+.sonification img {
+  width: 100%;
+  display: block;
+  background: #000;
+}
+
+.sonification figcaption {
+  font-size: var(--t-xs);
+  color: var(--ink-soft);
+  line-height: 1.45;
+  margin-top: 0.5rem;
+}
+
+.sonification-tracks { display: grid; gap: 1.1rem; margin-top: 1.5rem; }
+
+.track-label {
+  display: block;
+  font-size: var(--t-xs);
+  color: var(--ink-soft);
+  margin-bottom: 0.35rem;
+}
+
+.track audio { width: 100%; }
