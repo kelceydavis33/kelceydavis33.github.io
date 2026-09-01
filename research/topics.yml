@@ -1,0 +1,44 @@
+# The research areas, in the order they appear in the navigation and on the
+# homepage cards.
+#
+# This file controls how each area is presented. Which papers appear on each
+# area's page is set separately, by hand, in _data/paper_topics.yml.
+#
+# To add an area: add a block here, create a matching page in research/, and
+# make sure "url" below and the page's "permalink" agree exactly.
+
+lrd:
+  name: Little Red Dots
+  blurb: >-
+    Compact sources with v-shaped energy ditributions discovered by JWST
+  url: /research/little-red-dots/
+  image: /assets/img/lrds.png
+  image_alt: Image cutout of a little red dot from Kocevki 2024
+  image_caption: Image cutout of a little red dot from Kocevki 2024
+
+eelg:
+  name: Extreme Emission Line Galaxies
+  blurb: >-
+    Extremely strong rest-optical line emission at Cosmic Dawn as seen by JWST
+  url: /research/extreme-emission-line-galaxies/
+  image: /assets/img/eelg-thumb.jpg
+  image_alt: Brightest 100 EELGs in the sample from Davis 2024
+  image_caption: Brightest 100 EELGs in the sample from Davis 2024
+
+survey:
+  name: Survey Design
+  blurb: >-
+    Desiging NIRCam and NIRSpec observations for JWST and other future missions. 
+  url: /research/survey-design/
+  image: /assets/img/SPAM-can-logo.png
+  image_alt: SPAM survey logo
+  image_caption: SPAM survey logo
+
+other:
+  name: Other Work
+  blurb: >-
+    Projects that do not fit the three threads above, from instrument and
+    pipeline work to collaborations outside my main line of research.
+  url: /research/other/
+  image: /assets/img/CEERS11.jpg
+  image_alt: A deep JWST NIRCam image of the CEERS field
