@@ -6,8 +6,8 @@
   </p>
   <p class="paper-links">
     <a href="{{ include.paper.url_ads }}">ADS</a>
-    {% if include.paper.url_arxiv %}<a href="{{ include.paper.url_arxiv }}">arXiv</a>{% endif %}
-    {% if include.paper.url_doi %}<a href="{{ include.paper.url_doi }}">Journal</a>{% endif %}
+    {% if include.paper.url_arxiv != "" %}<a href="{{ include.paper.url_arxiv }}">arXiv</a>{% endif %}
+    {% if include.paper.url_doi != "" %}<a href="{{ include.paper.url_doi }}">Journal</a>{% endif %}
     {% if include.paper.citations > 0 %}<span class="paper-cites">{{ include.paper.citations }} citation{% if include.paper.citations != 1 %}s{% endif %}</span>{% endif %}
   </p>
 </li>
