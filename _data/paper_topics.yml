@@ -13,6 +13,10 @@
 # The title under each bibcode is only here so the file can be read.
 # Changing it has no effect on the site.
 
+"2026arXiv260812487B":
+  title: "Ripples in the OCEANS: Broad Line Variability of Little Red Dots"
+  topics: []
+
 "2026ApJ..1006...84J":
   title: "The Lifetimes of High-redshift Quasars Suggest Magnetic Disk Support"
   topics: [other]
