@@ -24,7 +24,9 @@
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2026arXiv260812487B/abstract",
       "url_arxiv": "https://arxiv.org/abs/2608.12487",
       "url_doi": "https://doi.org/10.48550/arXiv.2608.12487",
-      "topics": []
+      "topics": [
+        "lrd"
+      ]
     },
     {
       "bibcode": "2026ApJ..1006...84J",
