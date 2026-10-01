@@ -13,6 +13,14 @@
 # The title under each bibcode is only here so the file can be read.
 # Changing it has no effect on the site.
 
+"2026arXiv260910803G":
+  title: "The THRILS Factor: Investigating the properties of Little Red Dots (LRDs) at 3&lt;z&lt;6 with JWST/NIRSpec"
+  topics: []
+
+"2026arXiv260900112K":
+  title: "Skyfire: A Spectroscopic Census of Little Red Dots and Broad-Line AGN in the CEERS Field"
+  topics: []
+
 "2026arXiv260812487B":
   title: "Ripples in the OCEANS: Broad Line Variability of Little Red Dots"
   topics: [lrd]
