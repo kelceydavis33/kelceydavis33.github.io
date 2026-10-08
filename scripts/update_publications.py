@@ -445,7 +445,8 @@ def tidy(doc):
     paper = {
         "bibcode": doc["bibcode"],
         "title": title,
-        "authors_short": format_authors(authors, is_first_author),
+        "authors_short": format_authors(authors, is_first_author),           
+        "authors": authors,
         "author_count": len(authors),
         "author_position": position,
         "year": int(doc.get("year", 0)),
