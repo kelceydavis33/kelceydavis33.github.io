@@ -15,11 +15,11 @@
 
 "2026arXiv260910803G":
   title: "The THRILS Factor: Investigating the properties of Little Red Dots (LRDs) at 3&lt;z&lt;6 with JWST/NIRSpec"
-  topics: []
+  topics: [lrd]
 
 "2026arXiv260900112K":
   title: "Skyfire: A Spectroscopic Census of Little Red Dots and Broad-Line AGN in the CEERS Field"
-  topics: []
+  topics: [lrd, survey]
 
 "2026arXiv260812487B":
   title: "Ripples in the OCEANS: Broad Line Variability of Little Red Dots"
@@ -135,11 +135,11 @@
 
 "2024ApJ...969...90P":
   title: "The Next Generation Deep Extragalactic Exploratory Public Near-infrared Slitless Survey Epoch 1 (NGDEEP-NISS1): Extragalactic Star-formation and Active Galactic Nuclei at 0.5 &lt; z &lt; 3.6"
-  topics: []
+  topics: [survey]
 
 "2024ApJ...965L...6B":
   title: "The Next Generation Deep Extragalactic Exploratory Public (NGDEEP) Survey"
-  topics: []
+  topics: [survey]
 
 "2024ApJ...963..128B":
   title: "Extremely Red Galaxies at z = 5\u25009 with MIRI and NIRSpec: Dusty Galaxies or Obscured Active Galactic Nuclei?"
@@ -151,4 +151,4 @@
 
 "2023ApJ...945L..10G":
   title: "First Look at z &gt; 1 Bars in the Rest-frame Near-infrared with JWST Early CEERS Imaging"
-  topics: []
+  topics: [other]
