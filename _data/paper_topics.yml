@@ -13,6 +13,14 @@
 # The title under each bibcode is only here so the file can be read.
 # Changing it has no effect on the site.
 
+"2026arXiv261037564T":
+  title: "Little Red Dots with Broad H$\u03b2$ Lines Reveal the Black Hole Mass Function at 7&lt;z&lt;9.5"
+  topics: []
+
+"2026arXiv261035570L":
+  title: "SPAM: Survey Overview and JWST/NIRCam Multi-Band Photometry Catalog"
+  topics: []
+
 "2026arXiv260910803G":
   title: "The THRILS Factor: Investigating the properties of Little Red Dots (LRDs) at 3&lt;z&lt;6 with JWST/NIRSpec"
   topics: [lrd]
@@ -152,3 +160,11 @@
 "2023ApJ...945L..10G":
   title: "First Look at z &gt; 1 Bars in the Rest-frame Near-infrared with JWST Early CEERS Imaging"
   topics: [eelg]
+
+"2019JDSO...15..525K":
+  title: "Astrometric Measurements and Historical Data Summary of WDS 05599-3703 (B 1044AD)"
+  topics: []
+
+"2019JDSO...15..217D":
+  title: "An Astrometric Measurement of WDS 16476-4708 AB and AC"
+  topics: []
