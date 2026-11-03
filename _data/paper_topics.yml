@@ -15,11 +15,11 @@
 
 "2026arXiv261037564T":
   title: "Little Red Dots with Broad H$\u03b2$ Lines Reveal the Black Hole Mass Function at 7&lt;z&lt;9.5"
-  topics: []
+  topics: [lrd]
 
 "2026arXiv261035570L":
   title: "SPAM: Survey Overview and JWST/NIRCam Multi-Band Photometry Catalog"
-  topics: []
+  topics: [survey, lrd, eelg]
 
 "2026arXiv260910803G":
   title: "The THRILS Factor: Investigating the properties of Little Red Dots (LRDs) at 3&lt;z&lt;6 with JWST/NIRSpec"
