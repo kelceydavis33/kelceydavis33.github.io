@@ -20,6 +20,7 @@
 "2026arXiv261035570L":
   title: "SPAM: Survey Overview and JWST/NIRCam Multi-Band Photometry Catalog"
   topics: [survey, lrd, eelg]
+  co_first: true
 
 "2026arXiv260910803G":
   title: "The THRILS Factor: Investigating the properties of Little Red Dots (LRDs) at 3&lt;z&lt;6 with JWST/NIRSpec"
