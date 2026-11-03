@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-01",
+  "updated": "2026-11-03",
   "words": [
     {
       "text": "active",
@@ -255,7 +255,7 @@
     },
     {
       "text": "star",
-      "count": 37,
+      "count": 36,
       "weight": 4,
       "url": "https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0001-8047-8351%22%20abs%3A%22star%22"
     },

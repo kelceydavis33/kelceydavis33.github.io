@@ -1,12 +1,12 @@
 {
   "stats": {
-    "n_papers": 39,
+    "n_papers": 37,
     "n_refereed": 26,
-    "n_first_author": 4,
-    "citations_total": 2737,
+    "n_first_author": 3,
+    "citations_total": 2744,
     "h_index": 20,
     "i10_index": 26,
-    "updated": "2026-11-01"
+    "updated": "2026-11-03"
   },
   "papers": [
     {
@@ -530,7 +530,7 @@
       "year": 2026,
       "pubdate": "2026-03-00",
       "reference": "PhPl, 33, 032701 (2026)",
-      "citations": 0,
+      "citations": 1,
       "refereed": true,
       "role": "co",
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2026PhPl...33c2701W/abstract",
@@ -1020,7 +1020,7 @@
       "year": 2025,
       "pubdate": "2025-09-00",
       "reference": "A&A, 701, A122 (2025)",
-      "citations": 29,
+      "citations": 30,
       "refereed": true,
       "role": "co",
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2025A%26A...701A.122M/abstract",
@@ -1155,7 +1155,7 @@
       "year": 2025,
       "pubdate": "2025-07-00",
       "reference": "ApJL, 988, L10 (2025)",
-      "citations": 59,
+      "citations": 60,
       "refereed": true,
       "role": "co",
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2025ApJ...988L..10K/abstract",
@@ -1470,7 +1470,7 @@
       "year": 2025,
       "pubdate": "2025-04-00",
       "reference": "ApJL, 983, L4 (2025)",
-      "citations": 200,
+      "citations": 202,
       "refereed": true,
       "role": "co",
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2025ApJ...983L...4F/abstract",
@@ -1777,7 +1777,7 @@
       "year": 2024,
       "pubdate": "2024-07-00",
       "reference": "ApJL, 969, L2 (2024)",
-      "citations": 330,
+      "citations": 332,
       "refereed": true,
       "role": "co",
       "url_ads": "https://ui.adsabs.harvard.edu/abs/2024ApJ...969L...2F/abstract",
@@ -2112,51 +2112,6 @@
       "topics": [
         "eelg"
       ]
-    },
-    {
-      "bibcode": "2019JDSO...15..525K",
-      "title": "Astrometric Measurements and Historical Data Summary of WDS 05599-3703 (B 1044AD)",
-      "authors_short": "Kharrati, N., Davis, K.",
-      "authors": [
-        "Kharrati, Neusha",
-        "Davis, Kelcey"
-      ],
-      "author_count": 2,
-      "author_position": 2,
-      "year": 2019,
-      "pubdate": "2019-10-00",
-      "reference": "Preprint, 2019",
-      "citations": 0,
-      "refereed": false,
-      "role": "co",
-      "url_ads": "https://ui.adsabs.harvard.edu/abs/2019JDSO...15..525K/abstract",
-      "url_arxiv": "",
-      "url_doi": "",
-      "topics": []
-    },
-    {
-      "bibcode": "2019JDSO...15..217D",
-      "title": "An Astrometric Measurement of WDS 16476-4708 AB and AC",
-      "authors_short": "Davis, K., Vanslyke, S., Boyce, P., et al.",
-      "authors": [
-        "Davis, Kelcey",
-        "Vanslyke, Sophia",
-        "Boyce, Pat",
-        "Boyce, Grady",
-        "Little, Ashlyn"
-      ],
-      "author_count": 5,
-      "author_position": 1,
-      "year": 2019,
-      "pubdate": "2019-04-00",
-      "reference": "Preprint, 2019",
-      "citations": 0,
-      "refereed": false,
-      "role": "first",
-      "url_ads": "https://ui.adsabs.harvard.edu/abs/2019JDSO...15..217D/abstract",
-      "url_arxiv": "",
-      "url_doi": "",
-      "topics": []
     }
   ]
 }
