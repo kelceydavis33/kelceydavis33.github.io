@@ -21,9 +21,10 @@ layout: default
   editing that file takes effect on the next build. There is no need to
   re-run the ADS refresh after retagging a paper.
 
-  The first section normally lists papers you led. A page can single out a
-  different author position instead by setting lead_position in its front
-  matter, along with a heading to match:
+  The first section normally lists papers you led, including shared
+  first-author papers marked co_first in _data/paper_topics.yml. A page can
+  single out a different author position instead by setting lead_position
+  in its front matter, along with a heading to match:
 
     lead_position: 2
     lead_heading: Second-author publications
@@ -38,7 +39,13 @@ layout: default
 {% for paper in site.data.publications.papers %}
   {% assign entry = site.data.paper_topics[paper.bibcode] %}
   {% if entry.topics contains page.topic_id %}
-    {% if paper.author_position == lead_position %}
+    {% assign is_lead = false %}
+    {% if lead_position == 1 %}
+      {% if paper.author_position == 1 or entry.co_first %}{% assign is_lead = true %}{% endif %}
+    {% elsif paper.author_position == lead_position and entry.co_first != true %}
+      {% assign is_lead = true %}
+    {% endif %}
+    {% if is_lead %}
       {% assign lead_count = lead_count | plus: 1 %}
     {% else %}
       {% assign rest_count = rest_count | plus: 1 %}
@@ -52,7 +59,13 @@ layout: default
   <ul class="paper-list">
     {% for paper in site.data.publications.papers %}
       {% assign entry = site.data.paper_topics[paper.bibcode] %}
-      {% if entry.topics contains page.topic_id and paper.author_position == lead_position %}
+      {% assign is_lead = false %}
+      {% if lead_position == 1 %}
+        {% if paper.author_position == 1 or entry.co_first %}{% assign is_lead = true %}{% endif %}
+      {% elsif paper.author_position == lead_position and entry.co_first != true %}
+        {% assign is_lead = true %}
+      {% endif %}
+      {% if entry.topics contains page.topic_id and is_lead %}
         {% include paper-entry.html paper=paper %}
       {% endif %}
     {% endfor %}
@@ -69,7 +82,13 @@ layout: default
   <ul class="paper-list">
     {% for paper in site.data.publications.papers %}
       {% assign entry = site.data.paper_topics[paper.bibcode] %}
-      {% if entry.topics contains page.topic_id and paper.author_position != lead_position %}
+      {% assign is_lead = false %}
+      {% if lead_position == 1 %}
+        {% if paper.author_position == 1 or entry.co_first %}{% assign is_lead = true %}{% endif %}
+      {% elsif paper.author_position == lead_position and entry.co_first != true %}
+        {% assign is_lead = true %}
+      {% endif %}
+      {% if entry.topics contains page.topic_id and is_lead == false %}
         {% include paper-entry.html paper=paper %}
       {% endif %}
     {% endfor %}
