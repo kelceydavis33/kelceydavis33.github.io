@@ -301,6 +301,42 @@ def format_authors(authors, is_first_author):
     return line
 
 
+def format_co_first_authors(authors, position):
+    """Author string for a shared first-author paper: everyone up to and
+    including you, joined by "&", e.g. "Larson, R. L. & Davis, K., et al."."""
+    leads = []
+    for name in authors[:position]:
+        leads.append(shorten_name(name))
+
+    if len(leads) == 1:
+        line = leads[0]
+    else:
+        line = ", ".join(leads[:-1]) + " & " + leads[-1]
+
+    if len(authors) > position:
+        line = line + ", et al."
+    return line
+
+
+def apply_co_first(papers, assignments):
+    """Count papers marked co_first in the assignments file as first-author
+    papers, and list their authors as "Larson & Davis"."""
+    for paper in papers:
+        entry = assignments.get(paper["bibcode"], {})
+        if not entry.get("co_first"):
+            continue
+
+        if paper["author_position"] == 0:
+            print("  co_first is set on {} but you are not on its author "
+                  "list; leaving it alone".format(paper["bibcode"]))
+            continue
+
+        paper["role"] = "first"
+        paper["co_first"] = True
+        paper["authors_short"] = format_co_first_authors(
+            paper["authors"], paper["author_position"])
+
+
 def format_reference(doc, is_refereed):
     """A short journal reference like "ApJ, 968, 19"."""
     stems = doc.get("bibstem", [])
@@ -345,10 +381,13 @@ def load_assignments():
     return existing
 
 
-def assignment_block(bibcode, title, topics):
+def assignment_block(bibcode, title, topics, co_first=False):
     """One paper's entry, written so it is easy to edit by hand."""
-    return "\n{}:\n  title: {}\n  topics: [{}]\n".format(
+    block = "\n{}:\n  title: {}\n  topics: [{}]\n".format(
         json.dumps(bibcode), json.dumps(title), ", ".join(topics))
+    if co_first:
+        block = block + "  co_first: true\n"
+    return block
 
 
 def save_assignments(papers, existing, topic_names):
@@ -369,6 +408,11 @@ def save_assignments(papers, existing, topic_names):
         "#",
         "# The title under each bibcode is only here so the file can be read.",
         "# Changing it has no effect on the site.",
+        "#",
+        "# Add \"co_first: true\" under a paper where you share first authorship",
+        "# with the people listed ahead of you. It is then counted as a first-",
+        "# author paper, listed under \"Papers I led\", and its authors are shown",
+        "# joined by \"&\" (for example \"Larson, R. L. & Davis, K., et al.\").",
     ]
 
     blocks = []
@@ -386,7 +430,8 @@ def save_assignments(papers, existing, topic_names):
         if len(topics) == 0:
             unassigned = unassigned + 1
 
-        blocks.append(assignment_block(bibcode, paper["title"], topics))
+        blocks.append(assignment_block(bibcode, paper["title"], topics,
+                                       entry.get("co_first", False)))
 
     # Anything ADS no longer returns is kept rather than silently dropped,
     # so a bad query never destroys work already done.
@@ -403,7 +448,8 @@ def save_assignments(papers, existing, topic_names):
             topics = entry.get("topics")
             if topics is None:
                 topics = []
-            blocks.append(assignment_block(bibcode, entry.get("title", ""), topics))
+            blocks.append(assignment_block(bibcode, entry.get("title", ""), topics,
+                                           entry.get("co_first", False)))
 
     with open(ASSIGNMENTS_PATH, "w") as handle:
         handle.write("\n".join(header) + "\n")
@@ -629,6 +675,7 @@ def main():
         papers.append(tidy(doc))
 
     papers = drop_duplicates(papers)
+    apply_co_first(papers, assignments)
     papers.sort(key=lambda paper: (paper["pubdate"], paper["bibcode"]), reverse=True)
 
     if use_arxiv:
