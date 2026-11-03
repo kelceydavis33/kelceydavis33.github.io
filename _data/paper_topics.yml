@@ -12,6 +12,11 @@
 #
 # The title under each bibcode is only here so the file can be read.
 # Changing it has no effect on the site.
+#
+# Add "co_first: true" under a paper where you share first authorship
+# with the people listed ahead of you. It is then counted as a first-
+# author paper, listed under "Papers I led", and its authors are shown
+# joined by "&" (for example "Larson, R. L. & Davis, K., et al.").
 
 "2026arXiv261037564T":
   title: "Little Red Dots with Broad H$\u03b2$ Lines Reveal the Black Hole Mass Function at 7&lt;z&lt;9.5"
